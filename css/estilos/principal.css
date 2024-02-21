@@ -1,0 +1,18 @@
+.principal {
+  display: grid;
+  place-content: center;
+  margin-top: 10%;
+}
+
+.cardMia {
+  height: 10px;
+}
+
+.h1Principal {
+  display: grid;
+  place-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 120px;
+}
+
+/*# sourceMappingURL=principal.css.map */

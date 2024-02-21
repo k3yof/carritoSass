@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="icon" href="imagenes/perfil.png" type="image/x-icon">
+    <title>MOTOHUB-MVR</title>
+</head>
+<body>
+    <!-- Menu principal -->
+    <div class="menu">
+        <!-- El nombre de la marca motohub-->
+        <img class="foto" src="imagenes/perfil.png" alt="">
+        
+        <div class="menu-toggle" id="mobile-menu">
+            ☰
+        </div>
+        <div class="enlaces">
+            <a href="index.html">Yamaha</a>
+            <a href="experiencia.html">Cascos</a>
+            <a href="estudios.html">Accesorios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="index.html"><i class="bi bi-bag-fill"></i>0</a>
+        </div>
+
+    </div>
+
+    <!-- Video Yamaha r1 -->
+    <div class="video-container">
+        <video loop autoplay muted>
+            <source src="imagenes/YAMAHAR1.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    
+        <div class="textoVideo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus delectus eligendi aliquam itaque, doloribus reprehenderit architecto quam culpa nobis iste explicabo dolore quaerat voluptatum commodi tempora vero eius obcaecati excepturi.
+        </div>
+    </div>
+    
+    <!-- Div Principal -->
+    <div class="principal">
+        <h1 class="h1Principal">TOP VENTAS</h1>
+        <div class="container" id="productos-container">
+            <!-- Aquí se mostrarán las cartas de productos dinámicamente -->
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="medio">
+        <div class="contacto">
+            <h3>Contacto</h3>
+            <div class="raya-verde"></div>
+            
+        </div>
+        <form>
+            <!-- Campos del formulario -->
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo electrónico">
+            <textarea placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
+        <div class="separador"></div>
+        <div class="derechos-autor">
+        © 2024 Manuel Vico Revelles - Todos los derechos reservados
+        </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

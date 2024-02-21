@@ -1,0 +1,27 @@
+
+[
+    {
+      "id": 1,
+      "marca": "Honda",
+      "modelo": "CBR500R",
+      "precio": 8000,
+      "color": "Rojo",
+      "anioFabricacion": 2022
+    },
+    {
+      "id": 2,
+      "marca": "Yamaha",
+      "modelo": "YZF-R6",
+      "precio": 10000,
+      "color": "Azul",
+      "anioFabricacion": 2023
+    },
+    {
+      "id": 3,
+      "marca": "Kawasaki",
+      "modelo": "Ninja 650",
+      "precio": 9000,
+      "color": "Verde",
+      "anioFabricacion": 2022
+    }
+  ]

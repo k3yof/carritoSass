@@ -1,0 +1,179 @@
+@charset "UTF-8";
+.menu {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  background-color: #ffffff;
+}
+.menu .foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 25px;
+  background-color: none;
+}
+.menu .enlaces {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.menu .enlaces a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  grid-gap: 10px;
+  letter-spacing: 2px;
+}
+.menu .enlaces a:last-child {
+  margin-right: 0;
+}
+.menu .menu-toggle {
+  cursor: pointer;
+  display: none;
+  color: black;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .menu .menu {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
+    height: 100px;
+  }
+  .menu .enlaces {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+  .menu .menu-toggle {
+    display: block;
+  }
+  .menu .enlaces.show {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: static;
+    background-color: #ffffff;
+    width: 100%;
+    top: 100%;
+  }
+  .menu .enlaces.show a {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.video-container {
+  position: relative;
+  height: 40vh;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.textoVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.principal {
+  display: grid;
+  place-content: center;
+  margin-top: 10%;
+}
+
+.cardMia {
+  height: 10px;
+}
+
+.h1Principal {
+  display: grid;
+  place-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 120px;
+}
+
+.footer {
+  background-color: black;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+}
+.footer .separador {
+  border-top: 1px solid white;
+  grid-column: 1/-1;
+  margin: 10px 0;
+}
+.footer .medio {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+}
+.footer .contacto {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.footer .contacto h3 {
+  margin: 0;
+  font-size: 24px;
+}
+.footer .contacto::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #2ecc71;
+  margin-top: 5px;
+}
+.footer form {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 50%;
+}
+.footer form input, .footer form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.footer form button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+.footer .derechos-autor {
+  font-size: 16px;
+  grid-column: 1/-1;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #ecf0f1;
+}
+
+/*# sourceMappingURL=todo.css.map */

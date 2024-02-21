@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.menu {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  background-color: #ffffff;
+}
+.menu .foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 25px;
+  background-color: none;
+}
+.menu .enlaces {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.menu .enlaces a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  grid-gap: 10px;
+  letter-spacing: 2px;
+}
+.menu .enlaces a:last-child {
+  margin-right: 0;
+}
+.menu .menu-toggle {
+  cursor: pointer;
+  display: none;
+  color: black;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .menu .menu {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
+    height: 100px;
+  }
+  .menu .enlaces {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+  .menu .menu-toggle {
+    display: block;
+  }
+  .menu .enlaces.show {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: static;
+    background-color: #ffffff;
+    width: 100%;
+    top: 100%;
+  }
+  .menu .enlaces.show a {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

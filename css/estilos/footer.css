@@ -1,0 +1,61 @@
+.footer {
+  background-color: black;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+}
+.footer .separador {
+  border-top: 1px solid white;
+  grid-column: 1/-1;
+  margin: 10px 0;
+}
+.footer .medio {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+}
+.footer .contacto {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.footer .contacto h3 {
+  margin: 0;
+  font-size: 24px;
+}
+.footer .contacto::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #2ecc71;
+  margin-top: 5px;
+}
+.footer form {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 50%;
+}
+.footer form input, .footer form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.footer form button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+.footer .derechos-autor {
+  font-size: 16px;
+  grid-column: 1/-1;
+}
+
+/*# sourceMappingURL=footer.css.map */

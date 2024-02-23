@@ -1,27 +1,148 @@
-
-[
+{
+  "motos": [
     {
       "id": 1,
-      "marca": "Honda",
-      "modelo": "CBR500R",
-      "precio": 8000,
-      "color": "Rojo",
-      "anioFabricacion": 2022
+      "marca": "Yamaha",
+      "modelo": "R1",
+      "precio": 23099,
+      "color": "Black",
+      "imagen": "../imagenes/r1/r1.png"
     },
     {
       "id": 2,
       "marca": "Yamaha",
-      "modelo": "YZF-R6",
-      "precio": 10000,
-      "color": "Azul",
-      "anioFabricacion": 2023
+      "modelo": "R7",
+      "precio": 9799,
+      "color": "Black",
+      "imagen": "../imagenes/r7/r7.png"
     },
     {
       "id": 3,
-      "marca": "Kawasaki",
-      "modelo": "Ninja 650",
-      "precio": 9000,
-      "color": "Verde",
-      "anioFabricacion": 2022
+      "marca": "Yamaha",
+      "modelo": "MT-125",
+      "precio": 5399,
+      "color": "MidNight Cyan",
+      "imagen": "../imagenes/mt125/mt125.png"
+    },
+    {
+      "id": 4,
+      "marca": "Yamaha",
+      "modelo": "R6 RACE",
+      "precio": 25000,
+      "color": "Tech Black",
+      "imagen": "../imagenes/r6Race/r6Race.png"
+    },
+    {
+      "id": 5,
+      "marca": "Yamaha",
+      "modelo": "MT-10 SP",
+      "precio": 20000,
+      "color": "Icon Performance",
+      "imagen": "../imagenes/mt10SP/mt10SP.png"
+    },
+    {
+      "id": 6,
+      "marca": "Yamaha",
+      "modelo": "R6 GYTR",
+      "precio": 32000,
+      "color": "Primer White",
+      "imagen": "../imagenes/r6GYTR/r6GYTR.png"
+    },
+    {
+      "id": 7,
+      "marca": "Yamaha",
+      "modelo": "R125",
+      "precio": 5799,
+      "color": "Icon Blue",
+      "imagen": "../imagenes/r125/R125.png"
+    },
+    {
+      "id": 8,
+      "marca": "Yamaha",
+      "modelo": "MT-09 SP",
+      "precio": 13399,
+      "color": "Icon Performance",
+      "imagen": "../imagenes/mt09SP/mt09SP.png"
+    },
+    {
+      "id": 9,
+      "marca": "Yamaha",
+      "modelo": "R1M",
+      "precio": 30899,
+      "color": "Icon Performance",
+      "imagen": "../imagenes/r1m/r1m.png"
+    },
+    {
+      "id": 10,
+      "marca": "Yamaha",
+      "modelo": "MT-07 Pure",
+      "precio": 7499,
+      "color": "Black",
+      "imagen": "../imagenes/mt07pure/mt07pure.png"
+    },
+    {
+      "id": 11,
+      "marca": "Yamaha",
+      "modelo": "MT-125",
+      "precio": 5399,
+      "color": "Cyan",
+      "imagen": "../imagenes/mt125/mt125.png"
+    },
+    {
+      "id": 12,
+      "marca": "Yamaha",
+      "modelo": "MT-09",
+      "precio": 10999,
+      "color": "Cyan Storm",
+      "imagen": "../imagenes/mt09/mt09.png"
+    },
+    {
+      "id": 13,
+      "marca": "Yamaha",
+      "modelo": "MT-03",
+      "precio": 6399,
+      "color": "Icon Blue",
+      "imagen": "../imagenes/mt03/mt03.png"
+    },
+    {
+      "id": 14,
+      "marca": "Yamaha",
+      "modelo": "MT-125",
+      "precio": 5399,
+      "color": "Cyan",
+      "imagen": "../imagenes/mt125.png"
+    },
+    {
+      "id": 15,
+      "marca": "Yamaha",
+      "modelo": "MT-125",
+      "precio": 5399,
+      "color": "Cyan",
+      "imagen": "../imagenes/mt125.png"
+    },
+    {
+      "id": 16,
+      "marca": "Yamaha",
+      "modelo": "MT-125",
+      "precio": 5399,
+      "color": "Cyan",
+      "imagen": "../imagenes/mt125.png"
+    },
+    {
+      "id": 17,
+      "marca": "Yamaha",
+      "modelo": "MT-125",
+      "precio": 5399,
+      "color": "Cyan",
+      "imagen": "../imagenes/mt125.png"
+    },
+    {
+      "id": 18,
+      "marca": "Yamaha",
+      "modelo": "MT-125",
+      "precio": 5399,
+      "color": "Cyan",
+      "imagen": "../imagenes/mt125.png"
     }
   ]
+}

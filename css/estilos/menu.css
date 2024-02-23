@@ -47,7 +47,10 @@
     background-color: #333;
   }
   .menu .menu-toggle {
-    display: block;
+    display: grid;
+    place-content: end;
+    font-size: 4vh;
+    margin-right: 8vh;
   }
   .menu .enlaces.show {
     display: grid;
@@ -56,6 +59,7 @@
     background-color: #ffffff;
     width: 100%;
     top: 100%;
+    margin-left: 10vh;
   }
   .menu .enlaces.show a {
     text-align: center;

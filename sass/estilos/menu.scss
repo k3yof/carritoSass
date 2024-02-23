@@ -56,7 +56,10 @@
     }
 
     .menu-toggle {
-        display: block;
+        display: grid;
+        place-content: end;
+        font-size: 4vh;
+        margin-right: 8vh;
     }
 
     .enlaces.show{
@@ -66,6 +69,7 @@
         background-color: $blanco;
         width: 100%;
         top: 100%;
+        margin-left:10vh;
     }
 
     .enlaces.show a{

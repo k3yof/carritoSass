@@ -107,42 +107,42 @@
     {
       "id": 14,
       "marca": "Yamaha",
-      "modelo": "MT-125",
-      "precio": 5399,
-      "color": "Cyan",
-      "imagen": "../imagenes/mt125.png"
+      "modelo": "YZ450F",
+      "precio": 10499,
+      "color": "Icon Blue",
+      "imagen": "../imagenes/YZ450F/YZ450F.png"
     },
     {
       "id": 15,
       "marca": "Yamaha",
-      "modelo": "MT-125",
-      "precio": 5399,
-      "color": "Cyan",
-      "imagen": "../imagenes/mt125.png"
+      "modelo": "YZ250F",
+      "precio": 10199,
+      "color": "Anniversary White",
+      "imagen": "../imagenes/YZ250F/YZ250F.png"
     },
     {
       "id": 16,
       "marca": "Yamaha",
-      "modelo": "MT-125",
-      "precio": 5399,
-      "color": "Cyan",
-      "imagen": "../imagenes/mt125.png"
+      "modelo": "YZ125",
+      "precio": 8499,
+      "color": "Monster Black",
+      "imagen": "../imagenes/YZ125/YZ125.png"
     },
     {
       "id": 17,
       "marca": "Yamaha",
-      "modelo": "MT-125",
-      "precio": 5399,
-      "color": "Cyan",
-      "imagen": "../imagenes/mt125.png"
+      "modelo": "PW50",
+      "precio": 2099,
+      "color": "Icon Blue",
+      "imagen": "../imagenes/PW50/PW50.png"
     },
     {
       "id": 18,
       "marca": "Yamaha",
-      "modelo": "MT-125",
-      "precio": 5399,
-      "color": "Cyan",
-      "imagen": "../imagenes/mt125.png"
+      "modelo": "R1 GYTR",
+      "precio": 28299,
+      "color": "Primer White",
+      "imagen": "../imagenes/R1GYTR/R1GYTR.png"
     }
   ]
 }

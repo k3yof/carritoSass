@@ -1,42 +1,9 @@
+// Menu hamburguesa
 document.getElementById('mobile-menu').addEventListener('click', function() {
     var enlaces = document.querySelector('.enlaces');
     enlaces.classList.toggle('show');
 });
-
-// Sacar las cartas del index.html de productos top
-// document.addEventListener("DOMContentLoaded", function () {
-//     console.log("Documento listo, ejecutando el script");
-
-//     fetch('js/productos.json')
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log("Datos cargados:", data);
-
-//             // Almacena los productos en una variable
-//             let motosHTML = "";
-
-//             // Recorre los productos y crea cartas dinámicamente
-//             data.motos.forEach(producto => {
-//                 motosHTML += `
-//                     <div class="col-md-4 mb-4">
-//                         <div class="card w-32 h-32">
-//                             <img src="${producto.imagen}" class="card-img-top" alt="${producto.marca} ${producto.modelo}">  <!-- Agrega la imagen -->
-//                             <div class="card-body">
-//                                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
-//                                 <p class="card-text">Color: ${producto.color}</p>
-//                                 <p class="card-text">Precio: $${producto.precio}</p>
-//                                 <a href="#" class="btn btn-primary">Comprar</a>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 `;
-//             });
-
-//             // Agrega todos los productos al contenedor de una vez
-//             document.getElementById("productos-container").innerHTML = motosHTML;
-//         })
-//         .catch(error => console.error("Error al cargar los datos:", error));
-// });
+// TOP MOTOS
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Documento listo, ejecutando el script");
 
@@ -56,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const productosMostrar = productosAlmacenados.length > 0 ? productosAlmacenados : seleccionarAleatorios(productos, 3);
 
             // Tiempo que tarda en cambiar
-            intervalId = setInterval(rotarProductos, 30000);
+            intervalId = setInterval(rotarProductos, 5000);
 
             // Muestra los productos seleccionados
             mostrarProductos(productosMostrar);
@@ -121,3 +88,37 @@ document.addEventListener("DOMContentLoaded", function () {
         return productosAlmacenados ? JSON.parse(productosAlmacenados) : [];
     }
 });
+
+
+// Para las categorias
+const contenedorCartas = document.getElementById('contenedor-cartas');
+
+// Función para crear una carta HTML para cada categoría
+function crearCarta(categoria) {
+    if (categoria.destacada) {
+        return `
+        <div class="col-md-4 mb-4">
+        <div class="card m-3">
+            <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre} ${categoria.modelo}">
+            <div class="card-body">
+                <a href="#" class="btn btn-primary">${categoria.nombre}</a>
+            </div>
+        </div>
+    </div>
+        `;
+    } else {
+        return ''; // Si no está destacada, retorna una cadena vacía para no mostrar nada
+    }
+}
+
+
+// Cargar las categorías desde el archivo JSON
+fetch('js/categorias.json')
+    .then(response => response.json())
+    .then(categorias => {
+        // Mostrar una carta para cada categoría en el contenedor
+        categorias.forEach(categoria => {
+            contenedorCartas.innerHTML += crearCarta(categoria);
+        });
+    })
+    .catch(error => console.error('Error al cargar el archivo JSON:', error));

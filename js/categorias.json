@@ -1,0 +1,6 @@
+[
+    { "id": "1", "nombre": "Deportivas", "imagen": "../imagenes/r1/r1.png", "destacada": true },
+    { "id": "2", "nombre": "Hyper Naked", "imagen": "../imagenes/mt10SP/mt10SP.png", "destacada": true },
+    { "id": "3", "nombre": "Motocross", "imagen": "../imagenes/YZ250F/YZ250F.png", "destacada": true },
+    { "id": "4", "nombre": "Niño", "imagen": "../imagenes/PW50/PW50.png", "destacada": true }
+]

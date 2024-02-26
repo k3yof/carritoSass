@@ -92,6 +92,18 @@
   padding: 20px;
 }
 
+.moto1 {
+  height: 70vh;
+  background-color: red;
+  margin-top: 12vh;
+}
+
+.moto2 {
+  height: 70vh;
+  background-color: BLUE;
+  margin-top: 12vh;
+}
+
 .principal {
   display: grid;
   place-content: center;
@@ -133,6 +145,38 @@
 }
 @media screen and (max-width: 768px) {
   .container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(1, auto);
+  }
+}
+.h1Categorias {
+  display: grid;
+  place-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 120px;
+}
+
+.categorias {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.contenedor-cartas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 1290px) {
+  .contenedor-cartas {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media screen and (max-width: 768px) {
+  .contenedor-cartas {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(1, auto);

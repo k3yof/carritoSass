@@ -99,9 +99,9 @@
       "color": "Icon Performance",
       "imagen": "../imagenes/mt09SP/mt09SP.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/mt09SP/mt09SP.png",
+        "../imagenes/mt09SP/mt09SP-1.png",
+        "../imagenes/mt09SP/mt09SP-2.png"
       ]
     },
     {
@@ -112,9 +112,9 @@
       "color": "Icon Performance",
       "imagen": "../imagenes/r1m/r1m.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/r1m/r1m.png",
+        "../imagenes/r1m/r1m-1.png",
+        "../imagenes/r1m/r1m-2.png"
       ]
     },
     {
@@ -125,9 +125,9 @@
       "color": "Black",
       "imagen": "../imagenes/mt07pure/mt07pure.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/mt07pure/mt07pure.png",
+        "../imagenes/mt07pure/mt07pure-1.png",
+        "../imagenes/mt07pure/mt07pure-2.png"
       ]
     },
     {
@@ -151,9 +151,9 @@
       "color": "Cyan Storm",
       "imagen": "../imagenes/mt09/mt09.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/mt09/mt09.png",
+        "../imagenes/mt09/mt09-1.png",
+        "../imagenes/mt09/mt09-2.png"
       ]
     },
     {
@@ -164,9 +164,9 @@
       "color": "Icon Blue",
       "imagen": "../imagenes/mt03/mt03.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/mt03/mt03.png",
+        "../imagenes/mt03/mt03-1.png",
+        "../imagenes/mt03/mt03-2.png"
       ]
     },
     {
@@ -177,9 +177,9 @@
       "color": "Icon Blue",
       "imagen": "../imagenes/YZ450F/YZ450F.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/YZ450F/YZ450F.png",
+        "../imagenes/YZ450F/YZ450F-1.png",
+        "../imagenes/YZ450F/YZ450F-2.png"
       ]
     },
     {
@@ -190,9 +190,9 @@
       "color": "Anniversary White",
       "imagen": "../imagenes/YZ250F/YZ250F.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/YZ250F/YZ250F.png",
+        "../imagenes/YZ250F/YZ250F-1.png",
+        "../imagenes/YZ250F/YZ250F-2.png"
       ]
     },
     {
@@ -203,9 +203,9 @@
       "color": "Monster Black",
       "imagen": "../imagenes/YZ125/YZ125.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/YZ125/YZ125.png",
+        "../imagenes/YZ125/YZ125-1.png",
+        "../imagenes/YZ125/YZ125-2.png"
       ]
     },
     {
@@ -216,9 +216,9 @@
       "color": "Icon Blue",
       "imagen": "../imagenes/PW50/PW50.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/PW50/PW50.png",
+        "../imagenes/PW50/PW50-1.png",
+        "../imagenes/PW50/PW50-2.png"
       ]
     },
     {
@@ -229,9 +229,9 @@
       "color": "Primer White",
       "imagen": "../imagenes/R1GYTR/R1GYTR.png",
       "imagenes": [
-        "../imagenes/r3/r3.png",
-        "../imagenes/r3/r3-1.png",
-        "../imagenes/r3/r3-2.png"
+        "../imagenes/R1GYTR/R1GYTR.png",
+        "../imagenes/R1GYTR/R1GYTR-1.png",
+        "../imagenes/R1GYTR/R1GYTR-2.png"
       ]
     }
   ]

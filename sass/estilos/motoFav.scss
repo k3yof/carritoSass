@@ -1,10 +1,27 @@
 .moto1{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
     height: 70vh;
-    background-color: red;
-    margin-top: 12vh;
+    background-color: #070707;
+    color: white;
 }
 .moto2{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
     height: 70vh;
-    background-color: BLUE;
-    margin-top: 12vh;
+    color: white;
+    background-color: #3c3c3c;
 }
+    video{
+        height: 100%;
+    }
+    .moto1 div{
+        display: grid;
+        place-content: center;
+        margin: 2vh;
+    }
+    .moto2 div{
+        display: grid;
+        place-content: center;
+        margin: 2vh;
+    }

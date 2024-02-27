@@ -1,0 +1,48 @@
+.principal {
+  display: grid;
+  place-content: center;
+  margin-top: 10%;
+}
+
+.h1Principal {
+  display: grid;
+  place-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 120px;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 40vh;
+  margin: 10%;
+  grid-gap: 20px;
+}
+
+.card-body {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+@media screen and (max-width: 1290px) {
+  .container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+/*# sourceMappingURL=tienda.css.map */

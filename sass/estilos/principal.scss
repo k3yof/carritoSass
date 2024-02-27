@@ -1,6 +1,6 @@
 @import '../partials/variables.scss';
 
-.principal {
+.principal{
     display: grid;
     place-content: center;
     margin-top: 10%;
@@ -28,6 +28,13 @@
     display:grid;
     grid-template-columns: repeat(2,auto);
 }
+.div1{
+
+}
+.div2{
+
+}
+
 @media screen and (max-width: 1290px) {
     .container{
         display: grid;

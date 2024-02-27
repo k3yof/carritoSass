@@ -28,8 +28,9 @@
 
     </div>
     <!-- Div Principal -->
-    <div class="principalTienda p-5 bg-light">
-        <h1 class="h1Principal text-center mb-4">Nuestras Motos</h1>
+    <h1 class="h1Principal text-center mb-4">Nuestras Motos</h1>
+    <div class="principal">
+        <div class="principalTienda">
         <div class="div1">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" id="inputBusqueda" placeholder="Buscar producto">
@@ -69,7 +70,8 @@
                 </select>
             </div>
 
-            <button class="btn btn-secondary" id="btnAplicarFiltro">Aplicar Filtro</button>
+            <button class="btn btn-secondary" id="btnAplicarFiltro">Aplicar Filtros</button>
+            <button class="btn btn-secondary" id="btnBorrarFiltros">Borrar Filtros</button>
     </div>
     <div class="div2">
         <!-- Contenedor de productos con paginación -->
@@ -82,6 +84,7 @@
             <button class="btn btn-secondary" id="btnPaginaAnterior">Anterior</button>
             <span class="btn btn-secondary mx-3" id="paginaActual">1</span>
             <button class="btn btn-secondary" id="btnPaginaSiguiente">Siguiente</button>
+        </div>
         </div>
         </div>
     </div>

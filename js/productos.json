@@ -6,7 +6,12 @@
       "modelo": "R1",
       "precio": 23099,
       "color": "Black",
-      "imagen": "../imagenes/r1/r1.png"
+      "imagen": "../imagenes/r1/r1.png",
+      "imagenes": [
+        "../imagenes/r1/r1.png",
+        "../imagenes/r1/r1-1.png",
+        "../imagenes/r1/r1-2.png"
+      ]
     },
     {
       "id": 2,
@@ -14,7 +19,12 @@
       "modelo": "R7",
       "precio": 9799,
       "color": "Black",
-      "imagen": "../imagenes/r7/r7.png"
+      "imagen": "../imagenes/r7/r7.png",
+      "imagenes": [
+        "../imagenes/r7/r7.png",
+        "../imagenes/r7/r7-1.png",
+        "../imagenes/r7/r7-2.png"
+      ]
     },
     {
       "id": 3,
@@ -22,7 +32,12 @@
       "modelo": "MT-125",
       "precio": 5399,
       "color": "MidNight Cyan",
-      "imagen": "../imagenes/mt125/mt125.png"
+      "imagen": "../imagenes/mt125/mt125.png",
+      "imagenes": [
+        "../imagenes/mt125/mt125.png",
+        "../imagenes/mt125/mt125-1.png",
+        "../imagenes/mt125/mt125-2.png"
+      ]
     },
     {
       "id": 4,
@@ -30,7 +45,12 @@
       "modelo": "R6 RACE",
       "precio": 25000,
       "color": "Tech Black",
-      "imagen": "../imagenes/r6Race/r6Race.png"
+      "imagen": "../imagenes/r6Race/r6Race.png",
+      "imagenes": [
+        "../imagenes/r6Race/r6Race.png",
+        "../imagenes/r6Race/r6Race-1.png",
+        "../imagenes/r6Race/r6Race-2.png"
+      ]
     },
     {
       "id": 5,
@@ -38,7 +58,12 @@
       "modelo": "MT-10 SP",
       "precio": 20000,
       "color": "Icon Performance",
-      "imagen": "../imagenes/mt10SP/mt10SP.png"
+      "imagen": "../imagenes/mt10SP/mt10SP.png",
+      "imagenes": [
+        "../imagenes/mt10SP/mt10SP.png",
+        "../imagenes/mt10SP/mt10SP-1.png",
+        "../imagenes/mt10SP/mt10SP-2.png"
+      ]
     },
     {
       "id": 6,
@@ -46,7 +71,12 @@
       "modelo": "R6 GYTR",
       "precio": 32000,
       "color": "Primer White",
-      "imagen": "../imagenes/r6GYTR/r6GYTR.png"
+      "imagen": "../imagenes/r6GYTR/r6GYTR.png",
+      "imagenes": [
+        "../imagenes/r6GYTR/r6GYTR.png",
+        "../imagenes/r6GYTR/r6GYTR-1.png",
+        "../imagenes/r6GYTR/r6GYTR-2.png"
+      ]
     },
     {
       "id": 7,
@@ -54,7 +84,12 @@
       "modelo": "R125",
       "precio": 5799,
       "color": "Icon Blue",
-      "imagen": "../imagenes/r125/R125.png"
+      "imagen": "../imagenes/r125/R125.png",
+      "imagenes": [
+        "../imagenes/r125/R125.png",
+        "../imagenes/r125/R125-1.png",
+        "../imagenes/r125/R125-2.png"
+      ]
     },
     {
       "id": 8,
@@ -62,7 +97,12 @@
       "modelo": "MT-09 SP",
       "precio": 13399,
       "color": "Icon Performance",
-      "imagen": "../imagenes/mt09SP/mt09SP.png"
+      "imagen": "../imagenes/mt09SP/mt09SP.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 9,
@@ -70,7 +110,12 @@
       "modelo": "R1M",
       "precio": 30899,
       "color": "Icon Performance",
-      "imagen": "../imagenes/r1m/r1m.png"
+      "imagen": "../imagenes/r1m/r1m.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 10,
@@ -78,15 +123,25 @@
       "modelo": "MT-07 Pure",
       "precio": 7499,
       "color": "Black",
-      "imagen": "../imagenes/mt07pure/mt07pure.png"
+      "imagen": "../imagenes/mt07pure/mt07pure.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 11,
       "marca": "Yamaha",
-      "modelo": "MT-125",
-      "precio": 5399,
-      "color": "Cyan",
-      "imagen": "../imagenes/mt125/mt125.png"
+      "modelo": "R3",
+      "precio": 6799,
+      "color": "Icon Blue",
+      "imagen": "../imagenes/r3/r3.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 12,
@@ -94,7 +149,12 @@
       "modelo": "MT-09",
       "precio": 10999,
       "color": "Cyan Storm",
-      "imagen": "../imagenes/mt09/mt09.png"
+      "imagen": "../imagenes/mt09/mt09.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 13,
@@ -102,7 +162,12 @@
       "modelo": "MT-03",
       "precio": 6399,
       "color": "Icon Blue",
-      "imagen": "../imagenes/mt03/mt03.png"
+      "imagen": "../imagenes/mt03/mt03.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 14,
@@ -110,7 +175,12 @@
       "modelo": "YZ450F",
       "precio": 10499,
       "color": "Icon Blue",
-      "imagen": "../imagenes/YZ450F/YZ450F.png"
+      "imagen": "../imagenes/YZ450F/YZ450F.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 15,
@@ -118,7 +188,12 @@
       "modelo": "YZ250F",
       "precio": 10199,
       "color": "Anniversary White",
-      "imagen": "../imagenes/YZ250F/YZ250F.png"
+      "imagen": "../imagenes/YZ250F/YZ250F.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 16,
@@ -126,7 +201,12 @@
       "modelo": "YZ125",
       "precio": 8499,
       "color": "Monster Black",
-      "imagen": "../imagenes/YZ125/YZ125.png"
+      "imagen": "../imagenes/YZ125/YZ125.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 17,
@@ -134,7 +214,12 @@
       "modelo": "PW50",
       "precio": 2099,
       "color": "Icon Blue",
-      "imagen": "../imagenes/PW50/PW50.png"
+      "imagen": "../imagenes/PW50/PW50.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     },
     {
       "id": 18,
@@ -142,7 +227,12 @@
       "modelo": "R1 GYTR",
       "precio": 28299,
       "color": "Primer White",
-      "imagen": "../imagenes/R1GYTR/R1GYTR.png"
+      "imagen": "../imagenes/R1GYTR/R1GYTR.png",
+      "imagenes": [
+        "../imagenes/r3/r3.png",
+        "../imagenes/r3/r3-1.png",
+        "../imagenes/r3/r3-2.png"
+      ]
     }
   ]
 }

@@ -12,13 +12,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// function mostrarDetalles(producto) {
+//     const detallesProducto = document.getElementById('detallesProducto');
+
+//     // Crea el HTML para mostrar los detalles del producto
+//     const detallesHTML = `
+//         <div class="card">
+//             <img src="${producto.imagen}" class="card-img-top" alt="${producto.marca} ${producto.modelo}">
+//             <div class="card-body">
+//                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
+//                 <p class="card-text">Color: ${producto.color}</p>
+//                 <p class="card-text">Precio: $${producto.precio}</p>
+//                 <a href="../tienda.html" class="btn btn-secondary">Volver a tienda</a>
+//             </div>
+//         </div>
+//     `;
+
+//     detallesProducto.innerHTML = detallesHTML;
+// }
+
 function mostrarDetalles(producto) {
     const detallesProducto = document.getElementById('detallesProducto');
 
-    // Crea el HTML para mostrar los detalles del producto
+    // Crea el HTML para mostrar los detalles del producto con carrusel
     const detallesHTML = `
-        <div class="card">
-            <img src="${producto.imagen}" class="card-img-top" alt="${producto.marca} ${producto.modelo}">
+        <div id="detallesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                ${producto.imagenes.map((imagen, index) => `
+                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                        <img src="${imagen}" class="d-block w-100" alt="${producto.marca} ${producto.modelo}">
+                    </div>
+                `).join('')}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#detallesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#detallesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
             <div class="card-body">
                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
                 <p class="card-text">Color: ${producto.color}</p>
@@ -29,4 +62,14 @@ function mostrarDetalles(producto) {
     `;
 
     detallesProducto.innerHTML = detallesHTML;
+
+    // Inicializa el carrusel usando Bootstrap
+    const detallesCarousel = new bootstrap.Carousel(document.getElementById('detallesCarousel'));
+
+    // Agrega evento al cambio de slide para actualizar la información del producto
+    detallesCarousel._element.addEventListener('slide.bs.carousel', function (event) {
+        const indiceSlide = event.to; // Índice del nuevo slide
+        // Puedes actualizar el contenido del producto según el índice del slide si es necesario
+    });
 }
+

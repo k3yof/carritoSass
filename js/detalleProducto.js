@@ -1,3 +1,8 @@
+// Menu hamburguesa
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    var enlaces = document.querySelector('.enlaces');
+    enlaces.classList.toggle('show');
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene la información del producto almacenada en el almacenamiento local
@@ -12,24 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// function mostrarDetalles(producto) {
-//     const detallesProducto = document.getElementById('detallesProducto');
-
-//     // Crea el HTML para mostrar los detalles del producto
-//     const detallesHTML = `
-//         <div class="card">
-//             <img src="${producto.imagen}" class="card-img-top" alt="${producto.marca} ${producto.modelo}">
-//             <div class="card-body">
-//                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
-//                 <p class="card-text">Color: ${producto.color}</p>
-//                 <p class="card-text">Precio: $${producto.precio}</p>
-//                 <a href="../tienda.html" class="btn btn-secondary">Volver a tienda</a>
-//             </div>
-//         </div>
-//     `;
-
-//     detallesProducto.innerHTML = detallesHTML;
-// }
 
 function mostrarDetalles(producto) {
     const detallesProducto = document.getElementById('detallesProducto');
@@ -56,6 +43,7 @@ function mostrarDetalles(producto) {
                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
                 <p class="card-text">Color: ${producto.color}</p>
                 <p class="card-text">Precio: $${producto.precio}</p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('${producto.marca} ${producto.modelo}', ${producto.precio})">Agregar al carrito</button>
                 <a href="../tienda.html" class="btn btn-secondary">Volver a tienda</a>
             </div>
         </div>
@@ -72,4 +60,3 @@ function mostrarDetalles(producto) {
         // Puedes actualizar el contenido del producto según el índice del slide si es necesario
     });
 }
-

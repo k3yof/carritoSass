@@ -11,7 +11,8 @@
         "../imagenes/r1/r1.png",
         "../imagenes/r1/r1-1.png",
         "../imagenes/r1/r1-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 2,
@@ -24,7 +25,8 @@
         "../imagenes/r7/r7.png",
         "../imagenes/r7/r7-1.png",
         "../imagenes/r7/r7-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 3,
@@ -37,7 +39,8 @@
         "../imagenes/mt125/mt125.png",
         "../imagenes/mt125/mt125-1.png",
         "../imagenes/mt125/mt125-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 4,
@@ -50,7 +53,8 @@
         "../imagenes/r6Race/r6Race.png",
         "../imagenes/r6Race/r6Race-1.png",
         "../imagenes/r6Race/r6Race-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 5,
@@ -63,7 +67,8 @@
         "../imagenes/mt10SP/mt10SP.png",
         "../imagenes/mt10SP/mt10SP-1.png",
         "../imagenes/mt10SP/mt10SP-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 6,
@@ -76,7 +81,8 @@
         "../imagenes/r6GYTR/r6GYTR.png",
         "../imagenes/r6GYTR/r6GYTR-1.png",
         "../imagenes/r6GYTR/r6GYTR-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 7,
@@ -89,7 +95,8 @@
         "../imagenes/r125/R125.png",
         "../imagenes/r125/R125-1.png",
         "../imagenes/r125/R125-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 8,
@@ -102,7 +109,8 @@
         "../imagenes/mt09SP/mt09SP.png",
         "../imagenes/mt09SP/mt09SP-1.png",
         "../imagenes/mt09SP/mt09SP-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 9,
@@ -115,7 +123,8 @@
         "../imagenes/r1m/r1m.png",
         "../imagenes/r1m/r1m-1.png",
         "../imagenes/r1m/r1m-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 10,
@@ -128,7 +137,8 @@
         "../imagenes/mt07pure/mt07pure.png",
         "../imagenes/mt07pure/mt07pure-1.png",
         "../imagenes/mt07pure/mt07pure-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 11,
@@ -141,7 +151,8 @@
         "../imagenes/r3/r3.png",
         "../imagenes/r3/r3-1.png",
         "../imagenes/r3/r3-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 12,
@@ -154,7 +165,8 @@
         "../imagenes/mt09/mt09.png",
         "../imagenes/mt09/mt09-1.png",
         "../imagenes/mt09/mt09-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 13,
@@ -167,7 +179,8 @@
         "../imagenes/mt03/mt03.png",
         "../imagenes/mt03/mt03-1.png",
         "../imagenes/mt03/mt03-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 14,
@@ -180,7 +193,8 @@
         "../imagenes/YZ450F/YZ450F.png",
         "../imagenes/YZ450F/YZ450F-1.png",
         "../imagenes/YZ450F/YZ450F-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 15,
@@ -193,7 +207,8 @@
         "../imagenes/YZ250F/YZ250F.png",
         "../imagenes/YZ250F/YZ250F-1.png",
         "../imagenes/YZ250F/YZ250F-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 16,
@@ -206,7 +221,8 @@
         "../imagenes/YZ125/YZ125.png",
         "../imagenes/YZ125/YZ125-1.png",
         "../imagenes/YZ125/YZ125-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 17,
@@ -219,7 +235,8 @@
         "../imagenes/PW50/PW50.png",
         "../imagenes/PW50/PW50-1.png",
         "../imagenes/PW50/PW50-2.png"
-      ]
+      ],
+      "iva": 21
     },
     {
       "id": 18,
@@ -232,7 +249,8 @@
         "../imagenes/R1GYTR/R1GYTR.png",
         "../imagenes/R1GYTR/R1GYTR-1.png",
         "../imagenes/R1GYTR/R1GYTR-2.png"
-      ]
+      ],
+      "iva": 21
     }
   ]
 }

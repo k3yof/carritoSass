@@ -1,0 +1,27 @@
+@import '../partials/variables.scss';
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.carrito-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-content: center;
+}
+
+
+@media screen and (max-width: 1290px) {
+    .contenedor-cartas{
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media screen and (max-width: 768px) {
+    .contenedor-cartas{
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(1, auto);
+    }
+}

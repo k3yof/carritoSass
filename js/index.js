@@ -1,8 +1,10 @@
 // Menu hamburguesa
 document.getElementById('mobile-menu').addEventListener('click', function() {
+    console.log('Clic en el menú hamburguesa');
     var enlaces = document.querySelector('.enlaces');
     enlaces.classList.toggle('show');
 });
+
 // TOP MOTOS
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Documento listo, ejecutando el script");

@@ -28,7 +28,7 @@
 
     </div>
     <!-- carrito -->
-    <div class="container m-4">
+    <!-- <div class="container m-4">
         <h1 class="m-4">Tu carrito:</h1>
 
         <div id="carrito-container" class="mb-4"></div>
@@ -41,7 +41,38 @@
         <div class="mt-4">
             <h5>Total del Pedido:<span id="totalPedido"></span>€</h5>
         </div>
-    </div>
+    </div> -->
+    
+        <div class="card">
+            <div class="card-header">
+                <h2>Tu carrito:</h2>
+            </div>
+            <div class="card-body">
+                    <div id="carrito-container" class="mb-4"></div>
+        
+                <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
+                    <div class="mt-4">
+                        <label class="text-muted font-weight-normal">Promocode</label>
+                        <input type="text" placeholder="ABC" class="form-control">
+                    </div>
+                    <div class="d-flex">
+                        <div class="text-right mt-4">
+                        <label class="text-muted font-weight-normal m-0">Precio Total:<span id="totalPedido"></span>€</label>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+              
+                    <div class="col md-4">
+                        <button class="btn btn-secondary" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                        <a href="tienda.html" class="btn btn-secondary">Volver a la Tienda</a>
+                        <button class="btn btn-secondary" onclick="comprar()">Comprar</button>
+                    </div>
+                </div>
+            
+                </div>
+            </div>
     
     <!-- Footer -->
     <div class="footer">

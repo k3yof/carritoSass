@@ -9,6 +9,10 @@
   place-content: center;
 }
 
+.card {
+  box-shadow: 0 1px 15px 1px rgba(52, 40, 104, 0.08);
+}
+
 @media screen and (max-width: 1290px) {
   .contenedor-cartas {
     display: grid;

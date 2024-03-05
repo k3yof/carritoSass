@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p>Precio: $${producto.precio.toFixed(2)}</p>
                     <p>IVA: $${(precioConIva - producto.precio).toFixed(2)}</p>
                     <p>Precio + IVA: $${precioConIva.toFixed(2)}</p>
-                    <p>-------------------------</p>
                 </div>
             </div>
             `;

@@ -6,12 +6,13 @@
       "modelo": "R1",
       "precio": 23099,
       "color": "Black",
-      "imagen": "../imagenes/r1/r1.png",
+      "imagen": "../../imagenes/r1/r1.png",
       "imagenes": [
-        "../imagenes/r1/r1.png",
+        "/imagenes/r1/r1.png",
         "../imagenes/r1/r1-1.png",
         "../imagenes/r1/r1-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     },
     {
@@ -26,6 +27,7 @@
         "../imagenes/r7/r7-1.png",
         "../imagenes/r7/r7-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     },
     {

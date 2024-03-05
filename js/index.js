@@ -99,7 +99,7 @@ function crearCarta(categoria) {
         return `
         <div class="col-md-4 mb-4">
         <div class="card m-3">
-            <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre} ${categoria.modelo}">
+            <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre}">
             <div class="card-body">
                 <a href="#" class="btn btn-primary">${categoria.nombre}</a>
             </div>

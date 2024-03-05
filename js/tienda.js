@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="card-body">
                                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
                                 <p class="card-text">Color: ${producto.color}</p>
-                                <p class="card-text">Precio: $${producto.precio.toFixed(2)}</p>
-                                <p class="card-text">IVA: $${(precioConIva - producto.precio).toFixed(2)}</p>
-                                <p class="card-text">Precio + IVA: $${precioConIva.toFixed(2)}</p>
+                                <p class="card-text">Precio: €${producto.precio.toFixed(2)}</p>
+                                <p class="card-text">IVA: €${(precioConIva - producto.precio).toFixed(2)}</p>
+                                <p class="card-text">Precio + IVA: €${precioConIva.toFixed(2)}</p>
                                 <a href="#" class="btn btn-primary btn-detalle">Detalles</a>
                             </div>
                         </div>

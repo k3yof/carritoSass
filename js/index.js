@@ -103,13 +103,13 @@ function crearCarta(categoria) {
         <div class="card m-3">
             <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre}">
             <div class="card-body">
-                <a href="#" class="btn btn-primary">${categoria.nombre}</a>
+                <a href="#" class="btn btn-secondary">${categoria.nombre}</a>
             </div>
         </div>
     </div>
         `;
     } else {
-        return ''; // Si no está destacada, retorna una cadena vacía para no mostrar nada
+        return '';
     }
 }
 

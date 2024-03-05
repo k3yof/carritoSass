@@ -2,7 +2,6 @@
   display: grid;
   place-content: center;
   grid-template-columns: repeat(2, auto);
-  margin-top: 10%;
 }
 
 .h1Principal {
@@ -15,46 +14,60 @@
 .container {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
 }
 
 .card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   width: 40vh;
-  margin: 10%;
-  grid-gap: 20px;
 }
 
 .card-body {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
 }
 
-.principalTienda {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-content: center;
-  margin-left: 20vh;
-  margin-right: 20vh;
-}
-
-.div1 {
-  margin: 10vh;
-}
-
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 769px) {
+  .principal {
+    grid-template-columns: 1fr;
+  }
   .container {
-    display: grid;
-    place-content: center;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
+  .principal {
+    grid-template-columns: 1fr;
+  }
   .container {
-    display: grid;
-    place-content: center;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .h1Principal {
+    font-size: 45px;
+  }
+  .card {
+    width: 60vw;
+    margin: 5%;
+  }
+  .div1 {
+    width: 40vw;
+    margin: 5vh;
+  }
+}
+@media screen and (max-width: 370px) {
+  .h1Principal {
+    font-size: 30px;
+  }
+  .card {
+    width: 80vw;
+    margin: 5%;
+  }
+  .div1 {
+    width: 50vw;
+    margin: 5vh;
   }
 }
 

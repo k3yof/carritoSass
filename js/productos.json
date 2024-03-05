@@ -42,6 +42,7 @@
         "../imagenes/mt125/mt125-1.png",
         "../imagenes/mt125/mt125-2.png"
       ],
+      "categoria": "naked",
       "iva": 21
     },
     {
@@ -56,6 +57,7 @@
         "../imagenes/r6Race/r6Race-1.png",
         "../imagenes/r6Race/r6Race-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     },
     {
@@ -70,6 +72,7 @@
         "../imagenes/mt10SP/mt10SP-1.png",
         "../imagenes/mt10SP/mt10SP-2.png"
       ],
+      "categoria": "naked",
       "iva": 21
     },
     {
@@ -84,6 +87,7 @@
         "../imagenes/r6GYTR/r6GYTR-1.png",
         "../imagenes/r6GYTR/r6GYTR-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     },
     {
@@ -98,6 +102,7 @@
         "../imagenes/r125/R125-1.png",
         "../imagenes/r125/R125-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     },
     {
@@ -112,6 +117,7 @@
         "../imagenes/mt09SP/mt09SP-1.png",
         "../imagenes/mt09SP/mt09SP-2.png"
       ],
+      "categoria": "naked",
       "iva": 21
     },
     {
@@ -126,6 +132,7 @@
         "../imagenes/r1m/r1m-1.png",
         "../imagenes/r1m/r1m-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     },
     {
@@ -140,6 +147,7 @@
         "../imagenes/mt07pure/mt07pure-1.png",
         "../imagenes/mt07pure/mt07pure-2.png"
       ],
+      "categoria": "naked",
       "iva": 21
     },
     {
@@ -154,6 +162,7 @@
         "../imagenes/r3/r3-1.png",
         "../imagenes/r3/r3-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     },
     {
@@ -168,6 +177,7 @@
         "../imagenes/mt09/mt09-1.png",
         "../imagenes/mt09/mt09-2.png"
       ],
+      "categoria": "naked",
       "iva": 21
     },
     {
@@ -182,6 +192,7 @@
         "../imagenes/mt03/mt03-1.png",
         "../imagenes/mt03/mt03-2.png"
       ],
+      "categoria": "naked",
       "iva": 21
     },
     {
@@ -196,6 +207,7 @@
         "../imagenes/YZ450F/YZ450F-1.png",
         "../imagenes/YZ450F/YZ450F-2.png"
       ],
+      "categoria": "cross",
       "iva": 21
     },
     {
@@ -210,6 +222,7 @@
         "../imagenes/YZ250F/YZ250F-1.png",
         "../imagenes/YZ250F/YZ250F-2.png"
       ],
+      "categoria": "cross",
       "iva": 21
     },
     {
@@ -224,6 +237,7 @@
         "../imagenes/YZ125/YZ125-1.png",
         "../imagenes/YZ125/YZ125-2.png"
       ],
+      "categoria": "cross",
       "iva": 21
     },
     {
@@ -238,6 +252,7 @@
         "../imagenes/PW50/PW50-1.png",
         "../imagenes/PW50/PW50-2.png"
       ],
+      "categoria": "niño",
       "iva": 21
     },
     {
@@ -252,6 +267,7 @@
         "../imagenes/R1GYTR/R1GYTR-1.png",
         "../imagenes/R1GYTR/R1GYTR-2.png"
       ],
+      "categoria": "deportiva",
       "iva": 21
     }
   ]

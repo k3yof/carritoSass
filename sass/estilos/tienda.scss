@@ -1,65 +1,129 @@
+// @import '../partials/variables.scss';
+
+// .principal{
+//     display: grid;
+//     place-content: center;
+//     grid-template-columns: repeat(2,auto);
+//     // background-color: cyan;
+// } 
+
+// .h1Principal{
+//     display:grid;
+//     place-content:$center;
+//     font-family: $main-font;
+//     font-size: $fonth1;
+// }
+// .container{
+//     display: grid;
+//     place-content: center;
+//     grid-template-columns: repeat(3, auto);
+// }
+// .card {
+//     display: grid;
+//     grid-template-columns: repeat(1,1fr);
+//     width: 40vh;
+//     margin: 10%;
+//     grid-gap: 20px;
+// }
+// .card-body{
+//     display:grid;
+//     grid-template-columns: repeat(2,auto);
+// }
+
+// .div1{
+//     margin: 10vh;
+//     width: 20vh;
+// }
 @import '../partials/variables.scss';
 
-.principal{
+.principal {
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(2,auto);
-    margin-top: 10%;
+    grid-template-columns: repeat(2, auto);
     // background-color: cyan;
-} 
+}
 
-.h1Principal{
-    display:grid;
-    place-content:$center;
+.h1Principal {
+    display: grid;
+    place-content: $center; // Ajuste: cambiado de $center a center
     font-family: $main-font;
     font-size: $fonth1;
 }
-.container{
+
+.container {
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
 }
+
 .card {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     width: 40vh;
-    margin: 10%;
-    grid-gap: 20px;
-}
-.card-body{
-    display:grid;
-    grid-template-columns: repeat(2,auto);
 }
 
-.principalTienda{
+.card-body {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    place-content: center;
-    margin-left:20vh;
-    margin-right:20vh;
-    // background-color: black;
-}
-.div1{
-    // background-color: red;
-    margin: 10vh;
-}
-.div2{
-    // background-color: blue;
+    grid-template-columns: repeat(1, auto);
 }
 
-@media screen and (max-width: 1290px) {
-    .container{
-        display: grid;
-        place-content: center;
-        grid-template-columns: repeat(2, auto);
+// .div1 {
+//     display: grid;
+//     grid-template-columns:1fr;
+//     margin
+    
+// }
+
+@media screen and (max-width: 769px) {
+    .principal {
+        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
+    }
+
+    .container {
+        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
     }
 }
-@media screen and (max-width: 768px) {
-    .container{
-        display: grid;
-        place-content: center;
-        grid-template-columns: repeat(1, auto);
+
+@media screen and (max-width: 769px) {
+    .principal {
+        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
+    }
+
+    .container {
+        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
     }
 }
+
+@media screen and (max-width: 600px) {
+    .h1Principal{
+        font-size: 45px;
+    }
+    .card {
+        width: 60vw; // Cambio a un ancho relativo
+        margin: 5%; // Ajuste: reducido el margen
+    }
+
+    .div1 {
+        width: 40vw; // Cambio a un ancho relativo
+        margin: 5vh; // Ajuste: reducido el margen
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .h1Principal{
+        font-size: 30px;
+    }
+    .card {
+        width: 80vw; // Cambio a un ancho relativo
+        margin: 5%; // Ajuste: reducido el margen
+    }
+
+    .div1 {
+        width: 50vw; // Cambio a un ancho relativo
+        margin: 5vh; // Ajuste: reducido el margen
+    }
+}
+
+
 
 

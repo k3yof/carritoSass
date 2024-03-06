@@ -1,45 +1,9 @@
-// @import '../partials/variables.scss';
-
-// .principal{
-//     display: grid;
-//     place-content: center;
-//     grid-template-columns: repeat(2,auto);
-//     // background-color: cyan;
-// } 
-
-// .h1Principal{
-//     display:grid;
-//     place-content:$center;
-//     font-family: $main-font;
-//     font-size: $fonth1;
-// }
-// .container{
-//     display: grid;
-//     place-content: center;
-//     grid-template-columns: repeat(3, auto);
-// }
-// .card {
-//     display: grid;
-//     grid-template-columns: repeat(1,1fr);
-//     width: 40vh;
-//     margin: 10%;
-//     grid-gap: 20px;
-// }
-// .card-body{
-//     display:grid;
-//     grid-template-columns: repeat(2,auto);
-// }
-
-// .div1{
-//     margin: 10vh;
-//     width: 20vh;
-// }
 @import '../partials/variables.scss';
 
 .principal {
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
     // background-color: cyan;
 }
 
@@ -53,7 +17,7 @@
 .container {
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(4, auto);
 }
 
 .card {
@@ -67,12 +31,6 @@
     grid-template-columns: repeat(1, auto);
 }
 
-// .div1 {
-//     display: grid;
-//     grid-template-columns:1fr;
-//     margin
-    
-// }
 
 @media screen and (max-width: 769px) {
     .principal {

@@ -1,7 +1,7 @@
 .principal {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
 }
 
 .h1Principal {
@@ -14,7 +14,7 @@
 .container {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(4, auto);
 }
 
 .card {

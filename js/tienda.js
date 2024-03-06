@@ -4,18 +4,23 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
     enlaces.classList.toggle('show');
 });
 
+document.getElementById('mobile-menu').addEventListener('click', function () {
+    var enlaces = document.querySelector('.enlaces');
+    enlaces.classList.toggle('show');
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Documento listo, ejecutando el script");
 
-    let productos; // Guardamos nuestros productos.json en productos
-    const productosPorPagina = 4; // Cantidad de productos que mostramos si son 18/6=3
-    let paginaActual = 1; // Inicializo la pagina en 1
+    let productos;
+    const productosPorPagina = 8;
+    let paginaActual = 1;
 
-    // Ponemos los valores por defecto
     let filtroPrecioMinimo = 0;
     let filtroPrecioMaximo = Infinity;
     let filtroColor = "todos";
-    let filtroCategoria = "todos"; 
+    let filtroCategoria = "todos";
+    let ordenAscendente = true; // Nuevo: Variable para rastrear el orden
 
     fetch('js/productos.json')
         .then(response => response.json())
@@ -25,65 +30,55 @@ document.addEventListener("DOMContentLoaded", function () {
             productos = data.motos;
             mostrarProductos(productos);
 
-            // Cogemos el botón de buscar y llamamos a la función buscarProductos
             document.getElementById("btnBuscar").addEventListener("click", buscarProductos);
-
-            // Hacemos los botones para la paginación
             document.getElementById("btnPaginaAnterior").addEventListener("click", irPaginaAnterior);
             document.getElementById("btnPaginaSiguiente").addEventListener("click", irPaginaSiguiente);
-
-            // Para poder usar la tecla enter al buscar
             document.getElementById("inputBusqueda").addEventListener("keydown", function (event) {
                 if (event.key === "Enter") {
                     buscarProductos();
                 }
             });
-
-            // Con el botón AplicarFiltro y llamamos a la función de aplicarFiltro para aplicar los filtros de precio y color
             document.getElementById("btnAplicarFiltro").addEventListener("click", aplicarFiltro);
-
-            // Con el botón BorrarFiltros y llamamos a la función de borrarFiltros para borrar los filtros de precio y color y poner los de por defecto
             document.getElementById("btnBorrarFiltros").addEventListener("click", borrarFiltros);
 
-            // Controles de filtro de categoría
+            // Nuevo: Agregamos evento al botón de ordenar
+            document.getElementById("btnOrdenar").addEventListener("click", cambiarOrden);
+            
             const categorias = ["todos", "deportiva", "naked", "cross", "niño"];
             const selectCategoria = document.getElementById("selectCategoria");
 
             categorias.forEach(categoria => {
                 const option = document.createElement("option");
                 option.value = categoria;
-                option.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1); // Capitaliza la primera letra
+                option.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
                 selectCategoria.appendChild(option);
             });
         })
         .catch(error => console.error("Error al cargar los datos:", error));
 
     function mostrarProductos(productosMostrar) {
-        // Filtra los productos según la paginación y los filtros
         const productosFiltrados = productosMostrar.filter(producto => {
             const precioCumple = producto.precio >= filtroPrecioMinimo && producto.precio <= filtroPrecioMaximo;
             const colorCumple = filtroColor === "todos" || producto.color.toLowerCase() === filtroColor;
-            const categoriaCumple = filtroCategoria === "todos" || producto.categoria.toLowerCase() === filtroCategoria; // Nueva línea
+            const categoriaCumple = filtroCategoria === "todos" || producto.categoria.toLowerCase() === filtroCategoria;
 
             return precioCumple && colorCumple && categoriaCumple;
         });
 
-        // Calcula el índice de inicio y fin para la paginación
+        // Nuevo: Ordenar productos
+        const productosOrdenados = ordenarProductos(productosFiltrados);
+
         const indiceInicio = (paginaActual - 1) * productosPorPagina;
         const indiceFin = paginaActual * productosPorPagina;
 
-        // Obtiene los productos de la página actual
-        const productosPagina = productosFiltrados.slice(indiceInicio, indiceFin);
+        const productosPagina = productosOrdenados.slice(indiceInicio, indiceFin);
 
-        // Crea el HTML para los productos
         let motosHTML = "";
 
         if (productosPagina.length === 0) {
-            // Mostrar mensaje de error si no hay productos
             motosHTML = '<p>No se encontraron productos.</p>';
         } else {
             productosPagina.forEach(producto => {
-                // Calcula el precio total con IVA
                 const ivaDecimal = producto.iva / 100;
                 const precioConIva = producto.precio * (1 + ivaDecimal);
 
@@ -94,11 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="card-body">
                                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
                                 <p class="card-text">Color: ${producto.color}</p>
-                                <p class="card-text">Categoría: ${producto.categoria}</p> <!-- Nueva línea -->
+                                <p class="card-text">Categoría: ${producto.categoria}</p>
                                 <p class="card-text">Precio: €${producto.precio.toFixed(2)}</p>
                                 <p class="card-text">IVA: €${(precioConIva - producto.precio).toFixed(2)}</p>
                                 <p class="card-text">Precio + IVA: €${precioConIva.toFixed(2)}</p>
-                                <a href="#" class="btn btn-primary btn-detalle">Detalles</a>
+                                <a href="#" class="botonesPersonalizados btn-detalle">Detalles</a>
                             </div>
                         </div>
                     </div>
@@ -106,14 +101,27 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // Agrega los productos al contenedor
         document.getElementById("productos-container").innerHTML = motosHTML;
 
-        // Actualiza el número de página actual
         document.getElementById("paginaActual").textContent = paginaActual;
 
-        // Agrega eventos a los botones de detalles
         agregarEventosDetalles(productosPagina);
+    }
+
+    function ordenarProductos(productos) {
+        // Nuevo: Ordenar productos por precio ascendente o descendente
+        if (ordenAscendente) {
+            console.log("Ordenados de menor a mayor");
+            return productos.sort((a, b) => a.precio - b.precio);
+        } else {
+            console.log("Ordenados de mayor a menor");
+            return productos.sort((a, b) => b.precio - a.precio);
+        }
+    }
+
+    function cambiarOrden() {
+        ordenAscendente = !ordenAscendente;
+        mostrarProductos(productos);
     }
 
     function agregarEventosDetalles(productosMostrar) {
@@ -126,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Agregar evento al botón "Agregar al Carrito"
             const botonCarrito = document.createElement('button');
-            botonCarrito.className = 'btn btn-secondary btn-carrito';
+            botonCarrito.className = 'botonesPersonalizados btn-carrito';
             botonCarrito.textContent = 'Agregar al Carrito';
             botonCarrito.addEventListener('click', function () {
                 agregarAlCarrito(productosMostrar[index]);
@@ -136,20 +144,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     function agregarAlCarrito(producto) {
         // Obtener el carrito almacenado en el almacenamiento local
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-        // Agregar el producto al carrito
-        carrito.push(producto);
-
+    
+        // Verificar si el producto ya está en el carrito
+        const productoExistente = carrito.find(item => item.id === producto.id);
+    
+        if (productoExistente) {
+            // Si el producto ya está en el carrito, incrementar la cantidad
+            productoExistente.cantidad++;
+        } else {
+            // Si el producto no está en el carrito, agregarlo con cantidad 1
+            carrito.push({ ...producto, cantidad: 1 });
+        }
+    
         // Guardar el carrito actualizado en el almacenamiento local
         localStorage.setItem('carrito', JSON.stringify(carrito));
-
-        // Redirigir a la página del carrito
+        
+        
+        // Si quiero abrir la pagina de carrito despues de añadir el producto
         // window.location.href = 'carrito.html';
     }
-
     function mostrarDetalleProducto(producto) {
         // Almacena la información del producto en el almacenamiento local
         localStorage.setItem('productoSeleccionado', JSON.stringify(producto));

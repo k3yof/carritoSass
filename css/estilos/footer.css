@@ -1,62 +1,67 @@
-.footer {
-  background-color: black;
-  color: #ffffff;
+footer {
+  display: flex;
+  justify-content: space-around;
+  height: 40vh;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
   padding: 20px;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  display: grid;
-  grid-gap: 20px;
-  height: auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
-.footer .separador {
-  border-top: 1px solid white;
-  grid-column: 1/-1;
-  margin: 10px 0;
-}
-.footer .medio {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
-}
-.footer .contacto {
-  margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
+
+.perfil {
+  display: flex;
   align-items: center;
 }
-.footer .contacto h3 {
-  margin: 0;
-  font-size: 24px;
+
+.perfil img {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #051C80;
 }
-.footer .contacto::after {
-  content: "";
-  display: block;
-  width: 100%;
-  border-bottom: 2px solid #575757;
-  margin-top: 5px;
+
+.perfil-info {
+  text-align: left;
 }
-.footer form {
-  margin: 20px 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  width: 50%;
+
+.seccion-contacto, .seccion-redes {
+  text-align: center;
 }
-.footer form input, .footer form textarea {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
-.footer form button {
-  background-color: #575757;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
+
+.seccion-redes a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
 }
-.footer .derechos-autor {
-  font-size: 16px;
-  grid-column: 1/-1;
+
+.seccion-redes a:hover {
+  background-color: maroon;
+  transform: scale(2);
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .perfil img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

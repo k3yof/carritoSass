@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function rotarProductos() {
         // Para seleccionar la cantidad de motos
-        const productosAleatorios = seleccionarAleatorios(productos, 3);
+        const productosAleatorios = seleccionarAleatorios(productos, 4);
 
         // Guardamos la seleccion,para que cuando recargemos no cambie
         almacenarProductosSeleccionados(productosAleatorios);
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
                             <p class="card-text">Color: ${producto.color}</p>
                             <p class="card-text">Precio: $${producto.precio}</p>
-                            <a href="#" class="btn btn-primary">Detalles</a>
+                            <a href="#" class="botonesPersonalizados">Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ function crearCarta(categoria) {
         <div class="card m-3">
             <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre}">
             <div class="card-body">
-                <a href="#" class="btn btn-secondary">${categoria.nombre}</a>
+                <a href="../tienda.html" class="btn btn-secondary">${categoria.nombre}</a>
             </div>
         </div>
     </div>

@@ -1,3 +1,10 @@
+// Menu hamburguesa
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    console.log('Clic en el menú hamburguesa');
+    var enlaces = document.querySelector('.enlaces');
+    enlaces.classList.toggle('show');
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const carritoContainer = document.getElementById('carrito-container');
     const totalPedidoSpan = document.getElementById('totalPedido');

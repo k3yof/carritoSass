@@ -1,9 +1,4 @@
 // Menu hamburguesa
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    var enlaces = document.querySelector('.enlaces');
-    enlaces.classList.toggle('show');
-});
-
 document.getElementById('mobile-menu').addEventListener('click', function () {
     var enlaces = document.querySelector('.enlaces');
     enlaces.classList.toggle('show');
@@ -13,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Documento listo, ejecutando el script");
 
     let productos;
-    const productosPorPagina = 8;
+    const productosPorPagina = 9;
     let paginaActual = 1;
 
     let filtroPrecioMinimo = 0;
     let filtroPrecioMaximo = Infinity;
     let filtroColor = "todos";
     let filtroCategoria = "todos";
-    let ordenAscendente = true; // Nuevo: Variable para rastrear el orden
+    let ordenAscendente = true;
 
     fetch('js/productos.json')
         .then(response => response.json())
@@ -33,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("btnBuscar").addEventListener("click", buscarProductos);
             document.getElementById("btnPaginaAnterior").addEventListener("click", irPaginaAnterior);
             document.getElementById("btnPaginaSiguiente").addEventListener("click", irPaginaSiguiente);
+
             document.getElementById("inputBusqueda").addEventListener("keydown", function (event) {
                 if (event.key === "Enter") {
                     buscarProductos();
@@ -40,10 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             document.getElementById("btnAplicarFiltro").addEventListener("click", aplicarFiltro);
             document.getElementById("btnBorrarFiltros").addEventListener("click", borrarFiltros);
-
-            // Nuevo: Agregamos evento al botón de ordenar
             document.getElementById("btnOrdenar").addEventListener("click", cambiarOrden);
-            
+
             const categorias = ["todos", "deportiva", "naked", "cross", "niño"];
             const selectCategoria = document.getElementById("selectCategoria");
 
@@ -56,58 +50,126 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error al cargar los datos:", error));
 
-    function mostrarProductos(productosMostrar) {
-        const productosFiltrados = productosMostrar.filter(producto => {
-            const precioCumple = producto.precio >= filtroPrecioMinimo && producto.precio <= filtroPrecioMaximo;
-            const colorCumple = filtroColor === "todos" || producto.color.toLowerCase() === filtroColor;
-            const categoriaCumple = filtroCategoria === "todos" || producto.categoria.toLowerCase() === filtroCategoria;
-
-            return precioCumple && colorCumple && categoriaCumple;
-        });
-
-        // Nuevo: Ordenar productos
-        const productosOrdenados = ordenarProductos(productosFiltrados);
-
-        const indiceInicio = (paginaActual - 1) * productosPorPagina;
-        const indiceFin = paginaActual * productosPorPagina;
-
-        const productosPagina = productosOrdenados.slice(indiceInicio, indiceFin);
-
-        let motosHTML = "";
-
-        if (productosPagina.length === 0) {
-            motosHTML = '<p>No se encontraron productos.</p>';
-        } else {
-            productosPagina.forEach(producto => {
-                const ivaDecimal = producto.iva / 100;
-                const precioConIva = producto.precio * (1 + ivaDecimal);
-
-                motosHTML += `
-                    <div class="col-md-4 mb-4">
-                        <div class="card m-3">
-                            <img src="${producto.imagen}" class="card-img-top" alt="${producto.marca} ${producto.modelo}">
-                            <div class="card-body">
-                                <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
-                                <p class="card-text">Color: ${producto.color}</p>
-                                <p class="card-text">Categoría: ${producto.categoria}</p>
-                                <p class="card-text">Precio: €${producto.precio.toFixed(2)}</p>
-                                <p class="card-text">IVA: €${(precioConIva - producto.precio).toFixed(2)}</p>
-                                <p class="card-text">Precio + IVA: €${precioConIva.toFixed(2)}</p>
-                                <a href="#" class="botonesPersonalizados btn-detalle">Detalles</a>
+        function mostrarProductos(productosMostrar) {
+            const productosFiltrados = productosMostrar.filter(producto => {
+                const precioCumple = producto.precio >= filtroPrecioMinimo && producto.precio <= filtroPrecioMaximo;
+                const colorCumple = filtroColor === "todos" || producto.color.toLowerCase() === filtroColor;
+                const categoriaCumple = filtroCategoria === "todos" || producto.categoria.toLowerCase() === filtroCategoria;
+        
+                return precioCumple && colorCumple && categoriaCumple;
+            });
+        
+            const productosOrdenados = ordenarProductos(productosFiltrados);
+            const totalPaginas = Math.ceil(productosOrdenados.length / productosPorPagina);
+            const indiceInicio = (paginaActual - 1) * productosPorPagina;
+            const indiceFin = paginaActual * productosPorPagina;
+        
+            const productosPagina = productosOrdenados.slice(indiceInicio, indiceFin);
+        
+            let motosHTML = "";
+        
+            if (productosPagina.length === 0) {
+                motosHTML = '<p>No se encontraron productos.</p>';
+            } else {
+                productosPagina.forEach(producto => {
+                    const ivaDecimal = producto.iva / 100;
+                    const precioConIva = producto.precio * (1 + ivaDecimal);
+        
+                    motosHTML += `
+                        <div class="col-md-4 mb-4">
+                            <div class="card m-3">
+                                <img src="${producto.imagen}" class="card-img-top" alt="${producto.marca} ${producto.modelo}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
+                                    <p class="card-text">Color: ${producto.color}</p>
+                                    <p class="card-text">Categoría: ${producto.categoria}</p>
+                                    <p class="card-text">Precio: €${producto.precio.toFixed(2)}</p>
+                                    <p class="card-text">IVA: €${(precioConIva - producto.precio).toFixed(2)}</p>
+                                    <p class="card-text">Precio + IVA: €${precioConIva.toFixed(2)}</p>
+                                    <a href="#" class="botonesPersonalizados btn-detalle">Detalles</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                `;
-            });
+                    `;
+                });
+            }
+        
+            const paginaActualElement = document.getElementById("paginaActual");
+        
+            if (paginaActualElement) {
+                paginaActualElement.textContent = paginaActual;
+            }
+        
+            document.getElementById("productos-container").innerHTML = motosHTML;
+        
+            mostrarBotonesNumerados(totalPaginas);
+            agregarEventosDetalles(productosPagina);
         }
 
-        document.getElementById("productos-container").innerHTML = motosHTML;
+    function mostrarBotonesNumerados(totalPaginas) {
+        const paginasNumeradas = document.getElementById("paginasNumeradas");
+        paginasNumeradas.innerHTML = ""; // Limpiar contenido anterior
 
-        document.getElementById("paginaActual").textContent = paginaActual;
+        // Mostrar solo tres botones
+        const botonesMostrados = 3;
+        let inicio = Math.max(1, paginaActual - 1);
+        let fin = Math.min(inicio + botonesMostrados - 1, totalPaginas);
 
-        agregarEventosDetalles(productosPagina);
+        // Ajustar el inicio si es necesario para siempre mostrar tres botones
+        inicio = Math.max(1, fin - botonesMostrados + 1);
+
+        for (let i = inicio; i <= fin; i++) {
+            const boton = document.createElement("button");
+            boton.classList.add("botonesPersonalizados");
+            boton.textContent = i;
+            boton.addEventListener("click", function () {
+                paginaActual = i;
+                mostrarProductos(productos);
+            });
+            paginasNumeradas.appendChild(boton);
+        }
+    }
+    function actualizarPaginacion() {
+        const totalPaginas = Math.ceil(productos.length / productosPorPagina);
+
+        // Calculamos el rango de botones a mostrar (máximo 3 botones)
+        let inicio = Math.max(1, paginaActual - 1);
+        let fin = Math.min(inicio + 2, totalPaginas);
+
+        // Si hay menos de 3 páginas, ajustamos el inicio y el fin
+        if (totalPaginas <= 3) {
+            inicio = 1;
+            fin = totalPaginas;
+        }
+
+        let botonesPaginacion = "";
+        for (let i = inicio; i <= fin; i++) {
+            botonesPaginacion += `<button class="botonesPersonalizados btn-pagina ${i === paginaActual ? 'active' : ''}" data-pagina="${i}">${i}</button>`;
+        }
+
+        document.getElementById("paginasNumeradas").innerHTML = botonesPaginacion;
+
+        // Nueva línea: Agregamos eventos a los botones de paginación
+        document.querySelectorAll('.btn-pagina').forEach(btn => {
+            btn.addEventListener('click', function () {
+                paginaActual = parseInt(btn.getAttribute('data-pagina'));
+                mostrarProductos(productos);
+            });
+        });
     }
 
+    function ordenarProductos(productos) {
+        if (ordenAscendente) {
+            return productos.sort((a, b) => a.precio - b.precio);
+        } else {
+            return productos.sort((a, b) => b.precio - a.precio);
+        }
+    }
+
+    function cambiarOrden() {
+        ordenAscendente = !ordenAscendente;
+        mostrarProductos(productos);
+    }
     function ordenarProductos(productos) {
         // Nuevo: Ordenar productos por precio ascendente o descendente
         if (ordenAscendente) {

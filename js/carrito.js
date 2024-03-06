@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-md-3">
                     <label for="cantidad-${index}">Cantidad:</label>
-                    <input type="number" id="cantidad-${index}" value="${producto.cantidad}" min="1" oninput="actualizarCantidad(${index}, this.value)" onkeypress="actualizarSubtotal(event, ${index})">
+                    <input class="cantidadSitio" type="number" id="cantidad-${index}" value="${producto.cantidad}" min="1" oninput="actualizarCantidad(${index}, this.value)" onkeypress="actualizarSubtotal(event, ${index})">
                     <button onclick="eliminarProducto(${index})" class="botonesPersonalizados">Eliminar</button>
-                    <p>Subtotal: $<span id="subtotal-${index}">${(precioConIva * producto.cantidad).toFixed(2)}</span></p>
+                    <p>Subtotal: $<span class="textoResaltado" id="subtotal-${index}">${(precioConIva * producto.cantidad).toFixed(2)}</span></p>
                 </div>
             </div>
             `;

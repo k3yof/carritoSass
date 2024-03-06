@@ -3,10 +3,15 @@ footer {
   justify-content: space-around;
   height: 40vh;
   align-items: center;
-  background-color: #222;
-  color: #fff;
+  background-image: url(../../imagenes/footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #ffffff;
   padding: 20px;
+  font-size: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .perfil {

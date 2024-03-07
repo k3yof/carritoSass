@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .menu {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   background-color: #ffffff;
 }
@@ -10,15 +10,16 @@
   height: 150px;
   border-radius: 50%;
   margin-left: 25px;
+  margin-right: 70px;
   background-color: none;
 }
 .menu .enlaces {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
 }
 .menu .enlaces a {
   color: black;
-  font-size: 35px;
+  font-size: 30px;
   text-decoration: none;
   grid-gap: 10px;
   letter-spacing: 2px;
@@ -72,6 +73,38 @@
     grid-template-columns: 1fr;
     position: static;
     background-color: #ffffff;
+    margin-left: 16vh;
+  }
+  .menu .enlaces.show a {
+    text-align: center;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 515px) {
+  .menu .menu {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
+    height: 100px;
+  }
+  .menu .enlaces {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+  .menu .menu-toggle {
+    display: grid;
+    place-content: end;
+    font-size: 4vh;
+    margin-right: 8vh;
+  }
+  .menu .enlaces.show {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: static;
+    background-color: #ffffff;
     width: 100%;
     top: 100%;
     margin-left: 10vh;
@@ -99,7 +132,7 @@
 
 .moto1 {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: auto auto;
   height: 70vh;
   background-color: #070707;
   color: white;
@@ -107,13 +140,13 @@
 
 .moto2 {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: auto auto;
   height: 70vh;
   color: white;
   background-color: #3c3c3c;
 }
 
-video {
+.videoMotos {
   height: 100%;
 }
 
@@ -129,6 +162,33 @@ video {
   margin: 2vh;
 }
 
+@media screen and (max-width: 1445px) {
+  .moto1 {
+    grid-template-columns: repeat(1, auto);
+  }
+  .videoMotos {
+    height: 100%;
+    width: 100%;
+  }
+  .moto2 {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .moto1 {
+    display: grid;
+    place-content: center;
+    margin: 30px;
+  }
+  .moto2 {
+    display: grid;
+    place-content: center;
+    margin: 30px;
+  }
+  .videoMotos {
+    width: 70%;
+  }
+}
 .principal {
   display: grid;
   place-content: center;
@@ -142,10 +202,10 @@ video {
   font-size: 120px;
 }
 
-.container {
+.containerMotos {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
 }
 
 .card {
@@ -162,14 +222,20 @@ video {
 }
 
 @media screen and (max-width: 1290px) {
-  .container {
+  .h1Principal {
+    font-size: 25px;
+  }
+  .containerMotos {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(2, auto);
   }
 }
 @media screen and (max-width: 768px) {
-  .container {
+  .h1Principal {
+    font-size: 25px;
+  }
+  .containerMotos {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(1, auto);
@@ -283,7 +349,7 @@ video {
   font-size: 120px;
 }
 
-.categorias {
+.containerCategorias {
   display: grid;
   place-content: center;
   grid-template-columns: repeat(3, auto);
@@ -291,7 +357,7 @@ video {
 
 .contenedor-cartas {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @media screen and (max-width: 1290px) {
@@ -378,6 +444,10 @@ h3 {
     margin-bottom: 10px;
   }
 }
+header {
+  width: "100%";
+}
+
 header img {
   display: block;
   margin: 0 auto;
@@ -388,29 +458,95 @@ header img {
 }
 
 .formulario {
-  width: 100%;
-  margin: 20px auto;
+  margin-left: 25px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
 }
 
-form {
+#contactForm {
   display: grid;
   gap: 10px;
 }
 
-button {
-  padding: 10px;
-  color: white;
+.informacionSitio {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.informacionSitio p {
+  width: 50%;
+}
+
+.camposForm {
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #ecf0f1;
+  border-bottom: 2px solid black;
+}
+
+.div1Informacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.div1Informacion h1 {
+  color: black;
+}
+
+.div2Informacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
 }
 
 .principalFormulario {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 1317px) {
+  .principalFormulario {
+    place-items: center;
+    grid-template-columns: 1fr;
+  }
+  .formulario {
+    width: 100%;
+  }
+  .informacionSitio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1095px) {
+  .informacionSitio {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .div1Informacion {
+    place-items: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+  .div2Informacion {
+    place-items: center;
+    margin-bottom: 20%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .principalFormulario {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .informacionSitio {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
+header {
+  width: "100%";
 }
 
 .textoCentrado {
@@ -425,20 +561,11 @@ button {
 .cartasInformativas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  position: relative;
-  min-width: 0;
-  word-wrap: break-word;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-
-.cartasDeSobreNosotros {
-  height: 700px;
 }
 
 @media screen and (max-width: 1100px) {
   .textoCentrado {
-    font-size: 30px;
+    font-size: 20px;
     width: 50%;
     place-content: center;
   }
@@ -449,7 +576,7 @@ button {
 }
 @media screen and (max-width: 769px) {
   .textoCentrado {
-    font-size: 30px;
+    font-size: 15px;
     place-content: center;
     width: 80%;
   }
@@ -464,8 +591,8 @@ body {
 }
 
 .botonesPersonalizados {
-  padding: 10px 20px;
-  margin: 10px 20px;
+  padding: 5px 10px;
+  margin: 5px 10px;
   background-color: black;
   color: white;
   cursor: pointer;
@@ -476,6 +603,24 @@ body {
 .botonesPersonalizados:hover {
   background-color: #051C80;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto-card {
+  width: 300px;
+  height: 100%;
+  display: grid;
+  border: 1px solid black;
+  place-items: center;
+}
+
+.producto-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.producto-titulo {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 769px) {

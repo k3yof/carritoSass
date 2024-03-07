@@ -1,7 +1,2 @@
-@mixin display-pequeno{
-    @media only screen and (min-width:480px)
-    {
-        @content
-    }
-}
-// poner todas las medias querys aqui
+$display-grande:1100px;
+$display-pequeño:769px;

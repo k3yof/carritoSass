@@ -11,10 +11,10 @@
   font-size: 120px;
 }
 
-.container {
+.containerMotos {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
 }
 
 .card {
@@ -31,14 +31,20 @@
 }
 
 @media screen and (max-width: 1290px) {
-  .container {
+  .h1Principal {
+    font-size: 25px;
+  }
+  .containerMotos {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(2, auto);
   }
 }
 @media screen and (max-width: 768px) {
-  .container {
+  .h1Principal {
+    font-size: 25px;
+  }
+  .containerMotos {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(1, auto);

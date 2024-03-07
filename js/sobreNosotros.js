@@ -7,17 +7,16 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
 // Para las cartas informativas
 const contenedorCartas = document.getElementById('cartasInformativas');
 
-// Función para crear una carta HTML para cada noticia
+
 function crearCarta(carta) {
     if (carta.activada) {
         return `
             <div class="col-md-4 mb-4">
-                <div class="cartasDeSobreNosotros  m-3">
+                <div class="producto-card  m-3">
                     <img src="${carta.imagen}" class="card-img-top" alt="${carta.titulo}">
-                    <div class="card-body">
-                        <h5 class="card-title">${carta.titulo}</h5>
-                        <p class="card-text">${carta.texto}</p>
-    
+                    <div class="producto-info">
+                        <h5 class="producto-titulo">${carta.titulo}</h5>
+                        <p class="producto-datos">${carta.texto}</p>
                     </div>
                 </div>
             </div>

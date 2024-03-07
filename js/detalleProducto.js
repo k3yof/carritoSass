@@ -27,7 +27,7 @@ function mostrarDetalles(producto) {
             <div class="carousel-inner">
                 ${producto.imagenes.map((imagen, index) => `
                     <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                        <img src="${imagen}" class="d-block w-100" alt="${producto.marca} ${producto.modelo}">
+                        <img src="${imagen}" class="" alt="${producto.marca} ${producto.modelo}">
                     </div>
                 `).join('')}
             </div>
@@ -43,8 +43,8 @@ function mostrarDetalles(producto) {
                 <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
                 <p class="card-text">Color: ${producto.color}</p>
                 <p class="card-text">Precio: $${producto.precio}</p>
-                <button class="btn btn-primary" onclick="agregarAlCarrito('${producto.marca} ${producto.modelo}', ${producto.precio})">Agregar al carrito</button>
-                <a href="../tienda.html" class="btn btn-secondary">Volver a tienda</a>
+                <button class="botonesPersonalizados" onclick="agregarAlCarrito('${producto.marca} ${producto.modelo}', ${producto.precio})">Agregar al carrito</button>
+                <a href="../tienda.html" class="botonesPersonalizados">Volver a tienda</a>
             </div>
         </div>
     `;

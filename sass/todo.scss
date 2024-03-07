@@ -17,8 +17,8 @@ body{
     background-color: $gris;
 }
 .botonesPersonalizados {
-    padding: 10px 20px;
-    margin:10px 20px;
+    padding: 5px 10px;
+    margin:5px 10px;
     background-color: $negro;
     color: white;
     cursor: pointer;
@@ -29,6 +29,24 @@ body{
 .botonesPersonalizados:hover {
     background-color: $azul;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.producto-card {
+    width: 300px;
+    height: 100%;
+    display: grid;
+    border:1px solid black;
+    place-items:$center;
+}
+
+
+.producto-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.producto-titulo {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 @media screen and (max-width: 769px) {
     .botonesPersonalizados {

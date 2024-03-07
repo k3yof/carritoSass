@@ -28,34 +28,44 @@
     </div>
     <!-- Div Principal -->
     <header>
-        <img src="imagenes/contacto.png" alt="Imagen de contacto" width="100%">
+        <img src="imagenes/contacto.png" alt="Imagen de contacto">
     </header>
     <div class="principalFormulario">
         <div class="informacionSitio">
-            <h1>MOTOHUB</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi provident suscipit aperiam tempora illo nesciunt illum assumenda! Sed sint nihil nulla dolore ullam quaerat non error explicabo harum dicta.</p>
-            <h3>NUESTRAS INSTALACIONES EN GRANADA </h3>
-            <iframe
-                width="600"
-                height="450"
-                loading="lazy"
-                allowfullscreen
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.8937600253653!2d-2.766514969527596!3d37.48702434041817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6fe9ce3d0f9075%3A0x30faad66bcf34f33!2sIES%20Pedro%20Jim%C3%A9nez%20Montoya!5e0!3m2!1ses!2ses!4v1709798501496!5m2!1ses!2ses">
-            </iframe>
+            <div class="div1Informacion">
+                <h1>MOTOHUB</h1>
+                <p>La esencia de la velocidad y la elegancia en cada curva. 
+                    Descubre la libertad sobre dos ruedas con nuestras motos Yamaha, 
+                    donde el diseño impecable se encuentra con un rendimiento 
+                    incomparable. MotoHub, no solo una marca, sino una invitación a 
+                    explorar horizontes desconocidos y abrazar la emoción de la 
+                    carretera. ¡Vive la vida al máximo con MotoHub,
+                    donde cada kilómetro es una historia en dos ruedas!</p>
+            </div>
+            <div class="div2Informacion">
+                <h3>NUESTRAS INSTALACIONES EN GRANADA </h3>
+                <iframe
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.8937600253653!2d-2.766514969527596!3d37.48702434041817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6fe9ce3d0f9075%3A0x30faad66bcf34f33!2sIES%20Pedro%20Jim%C3%A9nez%20Montoya!5e0!3m2!1ses!2ses!4v1709798501496!5m2!1ses!2ses">
+                </iframe>
+            </div>
         </div>
         <div class="formulario">
             <h2>Contacto</h2>
             <form id="contactForm" onsubmit="validarFormulario(event)">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input class="camposForm" type="text" id="nombre" name="nombre" required>
     
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input class="camposForm" type="email" id="email" name="email" required>
     
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-    
-                <button type="submit">Enviar</button>
+                <label for="mensaje">Motivo del Mensaje:</label>
+                <textarea class="camposForm" id="mensaje" name="mensaje" rows="4" required></textarea>
+                <button type="submit" class="botonesPersonalizados ">Enviar</button>
+                
             </form>
         </div>
     </div>

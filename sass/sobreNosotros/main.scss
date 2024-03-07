@@ -1,0 +1,49 @@
+@import '../partials/variables.scss';
+@import '../partials/breakpoints.scss';
+.textoCentrado{
+    text-align:$center;
+    width: 20%;
+    display: grid;
+    place-content: $center;
+    margin-top:60px;
+    margin-bottom:60px;
+}
+.cartasInformativas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    position: relative;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.cartasDeSobreNosotros{
+    height: 700px;
+}
+
+@media screen and (max-width: 1100px) {
+    .textoCentrado {
+        font-size: 30px;
+        width: 50%;
+        place-content: $center;
+    }
+
+    .cartasInformativas {
+        place-content: $center;
+        grid-template-columns: repeat(2,1fr); 
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .textoCentrado {
+        font-size: 30px;
+        place-content: $center;
+        width: 80%;
+    }
+
+    .cartasInformativas {
+        place-content: $center;
+        grid-template-columns: repeat(1,auto); 
+    }
+}

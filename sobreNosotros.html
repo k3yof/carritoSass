@@ -23,11 +23,39 @@
             <a href="tienda.html">Tienda</a>
             <a href="sobreNosotros.html">Sobre Nosotros</a>
             <a href="contacto.html">Contacto</a>
+            <a  id="inputBusqueda"><i class="bi bi-search"></i></a>
             <a href="carrito.html"><i class="bi bi-bag-fill"></i></a>
         </div>
     </div>
-    <!-- Div Principal -->
+
+    <!-- <div class="menu">
+        <a href="index.html"><img class="foto" src="imagenes/perfil.png" alt=""></a>
     
+        <div class="menu-toggle" id="mobile-menu">
+            ☰
+        </div>
+        <div class="enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="sobreNosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <div class="buscar-productos">
+                <input type="text" id="inputBusqueda" placeholder="Buscar productos...">
+                <button id="btnBuscar">Buscar</button>
+            </div>
+            <a href="carrito.html"><i class="bi bi-bag-fill"></i></a>
+        </div>
+    </div> -->
+    <!-- Div Principal -->
+    <header>
+        <img src="imagenes/sobreNosotros/principal.png" alt="Imagen de contacto" width="100%">
+    </header>
+    <div class="textoCentrado container">
+        Nuestro objetivo es mejorar continuamente y crear un valor excepcional para sorprenderte y entusiasmarte. Descubre quiénes somos, nuestras operaciones y actividades, así como los productos y servicios que ofrecemos. En el centro de todo está nuestra ambición de ofrecer calidad en lo que hacemos y demostrar responsabilidad hacia ti, nuestros concesionarios, la sociedad y el medio ambiente.
+    </div>
+    <div id="cartasInformativas" class="cartasInformativas container">
+        <!-- Aquí se mostrarán las cartas informativas cargadas dinámicamente -->
+    </div>
     <!-- Footer -->
    <footer>
         <div class="perfil">
@@ -50,12 +78,34 @@
             <a href="contacto.html" target="_blank">Contacto</a>
         </div>
     </footer>
-    
+    <!-- Modal de Búsqueda -->
+    <div class="modal fade" id="modalBusqueda" tabindex="-1" role="dialog" aria-labelledby="modalBusquedaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBusquedaLabel">Búsqueda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="inputBusquedaModal" class="form-control" placeholder="Escribe tu búsqueda">
+                </div>
+                <div id="resultadosContainer"></div>
+
+                <div class="modal-footer">
+                    <button type="button" class="botonesPersonalizados" id="btnBuscarModal">Buscar</button>
+                    <button type="button" class="botonesPersonalizados" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- <script src="js/carrito.js"></script> -->
-    <script src="js/form.js"></script>
+    <script src="js/busqueda.js"></script>
+    <script src="js/sobreNosotros.js"></script>
 </body>
 </html>

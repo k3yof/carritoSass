@@ -11,15 +11,15 @@
 @import 'estilos/categorias.scss';
 @import 'estilos/footer.scss';
 @import 'contacto/main.scss';
+@import 'sobreNosotros/main.scss';
 body{
     overflow-x: hidden;
     background-color: $gris;
 }
 .botonesPersonalizados {
-    display: inline-block;
     padding: 10px 20px;
     margin:10px 20px;
-    background-color: $azul;
+    background-color: $negro;
     color: white;
     cursor: pointer;
     text-decoration: none;
@@ -27,7 +27,15 @@ body{
 }
 
 .botonesPersonalizados:hover {
-    background-color: #2980b9;
+    background-color: $azul;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 769px) {
+    .botonesPersonalizados {
+        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
+        padding: 5px 10px;
+        margin:5px 10px;
+    }
+}
+
 

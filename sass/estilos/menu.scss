@@ -17,18 +17,13 @@
 
     .enlaces {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
+    grid-template-columns: repeat(6, auto);
     a {
         color: $negro;
-        font-size: 20px;
+        font-size: 35px;
         text-decoration: none;
         grid-gap: $gapMenu;
         letter-spacing: 2px;
-
-        &:last-child {
-            margin-right: 0;
-        }
     }
     }
 
@@ -39,43 +34,61 @@
     font-size: 18px;
     }
 
+    @media screen and (max-width: 1240px) {
+        .enlaces a {
+            color: $negro;
+            font-size: 25px;
+            text-decoration: none;
+            grid-gap: $gapMenu;
+            letter-spacing: 2px;
+        }
+    }
+    @media screen and (max-width: 980px) {
+        .enlaces a {
+            color: $negro;
+            font-size: 18px;
+            text-decoration: none;
+            grid-gap: $gapMenu;
+            letter-spacing: 2px;
+        }
+    }
     @media screen and (max-width: 768px) {
-    .menu {
-        grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
-        height: 100px;
-    }
+        .menu {
+            grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
+            height: 100px;
+        }
 
-    .enlaces{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-    }
+        .enlaces{
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+        }
 
-    .menu-toggle {
-        display: grid;
-        place-content: end;
-        font-size: 4vh;
-        margin-right: 8vh;
-    }
+        .menu-toggle {
+            display: grid;
+            place-content: end;
+            font-size: 4vh;
+            margin-right: 8vh;
+        }
 
-    .enlaces.show{
-        display: grid; 
-        grid-template-columns: 1fr;
-        position: static;
-        background-color: $blanco;
-        width: 100%;
-        top: 100%;
-        margin-left:10vh;
-    }
+        .enlaces.show{
+            display: grid; 
+            grid-template-columns: 1fr;
+            position: static;
+            background-color: $blanco;
+            width: 100%;
+            top: 100%;
+            margin-left:10vh;
+        }
 
-    .enlaces.show a{
-        text-align: center;
-        padding: 10px;
-    }
+        .enlaces.show a{
+            text-align: center;
+            padding: 10px;
+        }
     }
 }
 

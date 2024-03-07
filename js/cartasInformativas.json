@@ -1,0 +1,46 @@
+{
+    "cartasInformativas": [
+    {
+        "id": 1,
+        "imagen": "../../imagenes/sobreNosotros/1.png",
+        "titulo": "Nuestra Mision",
+        "texto": "Desde que Genichi Kawakami fundó Yamaha Motor en 1955, nuestra misión ha sido ofrecerte Kando con nuestros productos y nuestros servicios. ¿Qué es Kando? Deja que te lo expliquemos.",
+        "activada": true
+    },
+    {
+        "id": 2,
+        "imagen": "../../imagenes/sobreNosotros/2.png",
+        "titulo": "Nuestra Historia",
+        "texto": "Nuestra historia comienza cuando Genichi Kawakami, nuestro fundador, decidió entrar en el mercado de las motocicletas. Su visión determinó el desarrollo de nuestros productos y actividades y todavía lo hace.",
+        "activada": true
+    },
+    {
+        "id": 3,
+        "imagen": "../../imagenes/sobreNosotros/3.png",
+        "titulo": "Nuestras actividades",
+        "texto": "Las actividades que emprendemos están siempre en consonancia con nuestra misión, ofrecer a la gente Kando, haciendo las cosas de forma poco convencional, pero asumiendo también nuestras responsabilidades sociales.",
+        "activada": true
+    },
+    {
+        "id": 4,
+        "imagen": "../../imagenes/sobreNosotros/4.png",
+        "titulo": "#MyYamahaStory",
+        "texto": "Cada persona revoluciona su corazón con Yamaha de formas diferentes. Descubre aquí las historias de nuestras leyendas de las competiciones y de la gente de Yamaha.",
+        "activada": true
+    },
+    {
+        "id": 5,
+        "imagen": "../../imagenes/sobreNosotros/5.png",
+        "titulo": "Trabajar en Yamaha",
+        "texto": "Yamaha es una empresa dinámica en la que todo el mundo se esfuerza por ofrecer Kando, una palabra japonesa que describe un momento en el que se vive una experiencia y emoción totalmente únicas, y eso es lo que pretendemos conseguir a través de nuestros productos y servicios.",
+        "activada": true
+    },
+    {
+        "id": 6,
+        "imagen": "../../imagenes/sobreNosotros/6.png",
+        "titulo": "Yamaha Motor Academy",
+        "texto": "En nuestra Yamaha Motor Academy, apoyamos a nuestros concesionarios con formación especializada, modernas oportunidades de desarrollo de habilidades y los conocimientos más novedosos para ayudarte a ofrecer la mejor experiencia al cliente del sector.",
+        "activada": true
+    }
+    ]
+}

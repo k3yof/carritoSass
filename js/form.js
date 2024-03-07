@@ -1,16 +1,16 @@
 // Menu hamburguesa
 document.getElementById('mobile-menu').addEventListener('click', function() {
     console.log('Clic en el menú hamburguesa');
-    var enlaces = document.querySelector('.enlaces');
+    let enlaces = document.querySelector('.enlaces');
     enlaces.classList.toggle('show');
 });
 
 function validarFormulario(event) {
     event.preventDefault();
 
-    var nombre = document.getElementById('nombre').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var mensaje = document.getElementById('mensaje').value.trim();
+    let nombre = document.getElementById('nombre').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let mensaje = document.getElementById('mensaje').value.trim();
 
     if (!validarCampoTexto(nombre)) {
         alert("Por favor, ingresa un nombre válido.");
@@ -34,12 +34,12 @@ function validarFormulario(event) {
 
 function validarCampoTexto(valor) {
     // Validar que el campo contenga solo letras y espacios
-    var regex = /^[A-Za-z\s]+$/;
+    let regex = /^[A-Za-z\s]+$/;
     return regex.test(valor);
 }
 
 function validarEmail(email) {
     // Expresión regular para validar un correo electrónico
-    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }

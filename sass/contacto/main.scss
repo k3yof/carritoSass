@@ -1,3 +1,5 @@
+@import '../partials/variables.scss';
+
 header img {
     display: block;
     margin: 0 auto;
@@ -8,7 +10,7 @@ header img {
 }
 
 .formulario {
-    max-width: 100%;
+    width: 100%;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -27,8 +29,14 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
-
-button:hover {
-
+.principalFormulario{
+    display:grid;
+    grid-template-columns:1fr 2fr;
 }
+// .mapa{
+//     width:600;
+//     height:450;
+//     src:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.8937600253653!2d-2.766514969527596!3d37.48702434041817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6fe9ce3d0f9075%3A0x30faad66bcf34f33!2sIES%20Pedro%20Jim%C3%A9nez%20Montoya!5e0!3m2!1ses!2ses!4v1709798501496!5m2!1ses!2ses";
+// }
+
 

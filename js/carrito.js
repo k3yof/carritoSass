@@ -1,7 +1,7 @@
 // Menu hamburguesa
 document.getElementById('mobile-menu').addEventListener('click', function() {
     console.log('Clic en el menú hamburguesa');
-    var enlaces = document.querySelector('.enlaces');
+    let enlaces = document.querySelector('.enlaces');
     enlaces.classList.toggle('show');
 });
 
@@ -161,6 +161,7 @@ function aplicarDescuento() {
         'luis': 5,
         'carlos': 15,
         'enrique': 30,
+        'salva': 20,
         'victor': 50,
         'manu': 80,
         

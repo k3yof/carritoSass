@@ -1,7 +1,7 @@
 // Menu hamburguesa
 document.getElementById('mobile-menu').addEventListener('click', function() {
     console.log('Clic en el menú hamburguesa');
-    var enlaces = document.querySelector('.enlaces');
+    let enlaces = document.querySelector('.enlaces');
     enlaces.classList.toggle('show');
 });
 
@@ -103,7 +103,7 @@ function crearCarta(categoria) {
         <div class="card m-3">
             <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre}">
             <div class="card-body">
-                <a href="../tienda.html" class="btn btn-secondary">${categoria.nombre}</a>
+                <a href="../tienda.html" class="botonesPersonalizados">${categoria.nombre}</a>
             </div>
         </div>
     </div>

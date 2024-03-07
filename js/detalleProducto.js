@@ -1,6 +1,6 @@
 // Menu hamburguesa
 document.getElementById('mobile-menu').addEventListener('click', function() {
-    var enlaces = document.querySelector('.enlaces');
+    let enlaces = document.querySelector('.enlaces');
     enlaces.classList.toggle('show');
 });
 

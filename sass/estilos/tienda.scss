@@ -30,7 +30,11 @@
     display: grid;
     grid-template-columns: repeat(1, auto);
 }
-
+.pagina-actual {
+    background-color: #000; /* Color de fondo de la página actual */
+    color: #000; /* Color del texto de la página actual */
+    /* Otros estilos según necesites */
+}
 
 @media screen and (max-width: 769px) {
     .principal {

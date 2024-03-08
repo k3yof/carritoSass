@@ -5,27 +5,27 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
     enlaces.classList.toggle('show');
 });
 
-// TOP MOTOS
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Documento listo, ejecutando el script");
 
-    let productos; // Almacena todos los productos
-    let intervalId; // Identificador del intervalo para la rotación
+    let productos; // Para guardar los productos
+    let intervalId; // Guardar el tiempo que tarda en cambiar
 
     fetch('js/productos.json')
         .then(response => response.json())
         .then(data => {
             console.log("Datos cargados:", data);
 
-            // Almacena todos los productos
+            // Dejamos nuestro json en productos
             productos = data.motos;
 
             // Recupera la selección almacenada o selecciona aleatoriamente tres productos
             const productosAlmacenados = obtenerProductosAlmacenados();
             const productosMostrar = productosAlmacenados.length > 0 ? productosAlmacenados : seleccionarAleatorios(productos, 3);
 
-            // Tiempo que tarda en cambiar
-            intervalId = setInterval(rotarProductos, 5000);
+            // Tiempo que tarda en cambiar(30 min)
+            intervalId = setInterval(rotarProductos, 300000);
 
             // Muestra los productos seleccionados
             mostrarProductos(productosMostrar);
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error al cargar los datos:", error));
 
     function rotarProductos() {
-        // Para seleccionar la cantidad de motos
+        // Vemos la cantidad de motos que salen en el index
         const productosAleatorios = seleccionarAleatorios(productos, 3);
 
         // Guardamos la seleccion,para que cuando recargemos no cambie
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
         });
 
-        // Agrega los productos al contenedor
+        // Agrega los productos al contenedor html para que cambie
         document.getElementById("productos-container").innerHTML = motosHTML;
     }
 
@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const indiceAleatorio = Math.floor(Math.random() * copiaArray.length);
             resultados.push(copiaArray.splice(indiceAleatorio, 1)[0]);
         }
+
 
         return resultados;
     }
@@ -97,6 +98,7 @@ const contenedorCartas = document.getElementById('contenedor-cartas');
 
 // Función para crear una carta HTML para cada categoría
 function crearCarta(categoria) {
+    // Si la condicion esta en true
     if (categoria.destacada) {
         return `
         <div class="col-md-4 mb-4">

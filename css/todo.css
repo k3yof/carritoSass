@@ -168,7 +168,7 @@
 
 @media screen and (max-width: 1290px) {
   .h1Principal {
-    font-size: 25px;
+    font-size: 80px;
   }
   .containerMotos {
     display: grid;
@@ -178,7 +178,7 @@
 }
 @media screen and (max-width: 768px) {
   .h1Principal {
-    font-size: 25px;
+    font-size: 40px;
   }
   .containerMotos {
     display: grid;
@@ -236,23 +236,16 @@
   grid-template-columns: repeat(1, auto);
 }
 
-.h1Principal {
+.h1Principal2 {
   display: grid;
   place-content: center;
   font-family: "Arial", sans-serif;
   font-size: 120px;
 }
 
-.container {
-  display: grid;
-  place-content: center;
-  grid-template-columns: repeat(4, auto);
-}
-
 .pagina-actual {
-  background-color: #000; /* Color de fondo de la página actual */
-  color: #000; /* Color del texto de la página actual */
-  /* Otros estilos según necesites */
+  background-color: mediumorchid;
+  color: mediumorchid;
 }
 
 @media screen and (max-width: 1425px) {
@@ -262,6 +255,9 @@
   }
 }
 @media screen and (max-width: 1235px) {
+  .h1Principal2 {
+    font-size: 80px;
+  }
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -296,7 +292,7 @@
 
 @media screen and (max-width: 1290px) {
   .h1Categorias {
-    font-size: 25px;
+    font-size: 80px;
   }
   .contenedor-cartas {
     display: grid;
@@ -306,7 +302,7 @@
 }
 @media screen and (max-width: 768px) {
   .h1Categorias {
-    font-size: 25px;
+    font-size: 40px;
   }
   .contenedor-cartas {
     display: grid;

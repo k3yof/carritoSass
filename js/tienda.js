@@ -7,10 +7,12 @@ document.getElementById('mobile-menu').addEventListener('click', function () {
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Documento listo, ejecutando el script");
 
+    // Variables importantes
     let productos;
-    const productosPorPagina = 8;
+    const productosPorPagina = 6;
     let paginaActual = 1;
 
+    // Filtros por defecto
     let filtroPrecioMinimo = 0;
     let filtroPrecioMaximo = Infinity;
     let filtroColor = "todos";
@@ -29,11 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("btnPaginaAnterior").addEventListener("click", irPaginaAnterior);
             document.getElementById("btnPaginaSiguiente").addEventListener("click", irPaginaSiguiente);
 
+            // Para poder hacer la busqueda con enter
             document.getElementById("inputBusqueda").addEventListener("keydown", function (event) {
                 if (event.key === "Enter") {
                     buscarProductos();
                 }
             });
+            // Botones para los filtros
             document.getElementById("btnAplicarFiltro").addEventListener("click", aplicarFiltro);
             document.getElementById("btnBorrarFiltros").addEventListener("click", borrarFiltros);
             document.getElementById("btnOrdenar").addEventListener("click", cambiarOrden);
@@ -43,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error al cargar los datos:", error));
 
+    
     function llenarOpcionesSelect(idSelect, opciones) {
         const selectElement = document.getElementById(idSelect);
 
@@ -53,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             selectElement.appendChild(option);
         });
     }
-
+    // Mostrar productos
     function mostrarProductos(productosMostrar) {
         const productosFiltrados = filtrarProductos(productosMostrar);
         const productosOrdenados = ordenarProductos(productosFiltrados);
@@ -80,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const indiceFin = paginaActual * productosPorPagina;
         return productosOrdenados.slice(indiceInicio, indiceFin);
     }
-
+    // Cartas
     function mostrarProductosHTML(productosPagina, totalPaginas) {
         const productosContainer = document.getElementById("productos-container");
         const paginaActualElement = document.getElementById("paginaActual");
@@ -118,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
         productosContainer.innerHTML = motosHTML;
     }
 
+    // Calcular el iva
     function calcularPrecioConIva(producto) {
         const ivaDecimal = producto.iva / 100;
         return producto.precio * (1 + ivaDecimal);
@@ -125,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function mostrarBotonesNumerados(totalPaginas) {
         const paginasNumeradas = document.getElementById("paginasNumeradas");
-        paginasNumeradas.innerHTML = ""; // Limpiar contenido anterior
+        paginasNumeradas.innerHTML = ""; 
 
         const botonesMostrados = 3;
         let inicio = Math.max(1, paginaActual - 1);
@@ -160,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
         paginasNumeradas.appendChild(boton);
     }
 
+    // Ordenar por precio en un orden
     function ordenarProductos(productos) {
         if (ordenAscendente) {
             console.log("Ordenados de menor a mayor");
@@ -170,11 +177,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Cambiar el orden de ordenarProductos para que vaya alternando
     function cambiarOrden() {
         ordenAscendente = !ordenAscendente;
         mostrarProductos(productos);
     }
 
+    // Creo el boton de agregar carrito donde tenga un .btn-detalle
     function agregarEventosDetalles(productosMostrar) {
         const botonesDetalles = document.querySelectorAll('.btn-detalle');
 
@@ -194,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Si existe sumamos 1 y si no lo agregamos
     function agregarAlCarrito(producto) {
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -208,11 +218,13 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }
 
+    // Irnos a detalleProducto.html y vemos cada producto
     function mostrarDetalleProducto(producto) {
         localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
         window.location.href = 'detalleProducto.html';
     }
 
+    // Cosas de filtros
     function buscarProductos() {
         const busqueda = document.getElementById("inputBusqueda").value.toLowerCase();
         const productosFiltrados = productos.filter(producto => {

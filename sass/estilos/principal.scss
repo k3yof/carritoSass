@@ -9,7 +9,7 @@
     display:grid;
     place-content:$center;
     font-family: $main-font;
-    font-size: $fonth1;
+    font-size: 120px;
 }
 .containerMotos{
     display: grid;
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 1290px) {
     .h1Principal{
-        font-size: 25px;
+        font-size: 80px;
     }
     .containerMotos{
         display: grid;
@@ -41,7 +41,7 @@
 }
 @media screen and (max-width: 768px) {
     .h1Principal{
-        font-size: 25px;
+        font-size: 40px;
     }
     .containerMotos{
         display: grid;

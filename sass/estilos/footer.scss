@@ -2,6 +2,7 @@
 @import '../partials/breakpoints.scss';
 @import '../partials/mixins.scss';
 footer {
+
     display: grid;
     height: 40vh;
     place-content:$center;

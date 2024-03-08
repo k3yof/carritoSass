@@ -24,46 +24,25 @@
   /* Otros estilos según necesites */
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1425px) {
+  .container {
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1235px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 902px) {
   .principal {
+    place-items: center;
     grid-template-columns: 1fr;
   }
   .container {
+    place-items: center;
     grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 769px) {
-  .principal {
-    grid-template-columns: 1fr;
-  }
-  .container {
-    grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 600px) {
-  .h1Principal {
-    font-size: 45px;
-  }
-  .card {
-    width: 60vw;
-    margin: 5%;
-  }
-  .div1 {
-    width: 40vw;
-    margin: 5vh;
-  }
-}
-@media screen and (max-width: 370px) {
-  .h1Principal {
-    font-size: 30px;
-  }
-  .card {
-    width: 80vw;
-    margin: 5%;
-  }
-  .div1 {
-    width: 50vw;
-    margin: 5vh;
   }
 }
 

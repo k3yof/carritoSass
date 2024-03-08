@@ -26,53 +26,28 @@
     /* Otros estilos según necesites */
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1425px) {
+
+    .container {
+        place-items: center;
+        grid-template-columns: repeat(3,1fr); 
+    }
+}
+@media screen and (max-width: 1235px) {
+    .container {
+        grid-template-columns: repeat(2,1fr); 
+    }
+}
+
+@media screen and (max-width: 902px) {
     .principal {
-        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
+        place-items: center;
+        grid-template-columns: 1fr; 
     }
 
     .container {
-        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
-    }
-}
-
-@media screen and (max-width: 769px) {
-    .principal {
-        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
-    }
-
-    .container {
-        grid-template-columns: 1fr; // Cambio a una sola columna en pantallas más pequeñas
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .h1Principal{
-        font-size: 45px;
-    }
-    .card {
-        width: 60vw; // Cambio a un ancho relativo
-        margin: 5%; // Ajuste: reducido el margen
-    }
-
-    .div1 {
-        width: 40vw; // Cambio a un ancho relativo
-        margin: 5vh; // Ajuste: reducido el margen
-    }
-}
-
-@media screen and (max-width: 370px) {
-    .h1Principal{
-        font-size: 30px;
-    }
-    .card {
-        width: 80vw; // Cambio a un ancho relativo
-        margin: 5%; // Ajuste: reducido el margen
-    }
-
-    .div1 {
-        width: 50vw; // Cambio a un ancho relativo
-        margin: 5vh; // Ajuste: reducido el margen
+        place-items: center;
+        grid-template-columns: 1fr; 
     }
 }
 

@@ -2,6 +2,24 @@
 @import '../partials/breakpoints.scss';
 @import '../partials/mixins.scss';
 
-.imagenesCar{
-    width: 250px;
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    color: #000;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; 
+}
+
+
+.carousel-indicators button {
+    background-color: #000; 
+    border-color: #000; 
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+    border-color: #000; 
 }

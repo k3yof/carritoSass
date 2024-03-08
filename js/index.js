@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <h5 class=""producto-titulo">${producto.marca} ${producto.modelo}</h5>
                             <p class="producto-datos">Color: ${producto.color}</p>
                             <p class="producto-datos">Precio: $${producto.precio}</p>
-                            <a href="#" class="botonesPersonalizados">Detalles</a>
+                            <a href="../tienda.html"> <button class="botonesPersonalizados">Detalles</button></a>
                         </div>
                     </div>
                 </div>

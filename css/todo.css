@@ -135,65 +135,6 @@
   z-index: -1;
 }
 
-.moto1 {
-  display: grid;
-  grid-template-columns: auto auto;
-  height: 70vh;
-  background-color: #070707;
-  color: white;
-}
-
-.moto2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  height: 70vh;
-  color: white;
-  background-color: #3c3c3c;
-}
-
-.videoMotos {
-  height: 100%;
-}
-
-.moto1 div {
-  display: grid;
-  place-content: center;
-  margin: 2vh;
-}
-
-.moto2 div {
-  display: grid;
-  place-content: center;
-  margin: 2vh;
-}
-
-@media screen and (max-width: 1445px) {
-  .moto1 {
-    grid-template-columns: repeat(1, auto);
-  }
-  .videoMotos {
-    height: 100%;
-    width: 100%;
-  }
-  .moto2 {
-    grid-template-columns: repeat(1, auto);
-  }
-}
-@media screen and (max-width: 1000px) {
-  .moto1 {
-    display: grid;
-    place-content: center;
-    margin: 30px;
-  }
-  .moto2 {
-    display: grid;
-    place-content: center;
-    margin: 30px;
-  }
-  .videoMotos {
-    width: 70%;
-  }
-}
 .principal {
   display: grid;
   place-content: center;
@@ -266,6 +207,10 @@
 
 .cantidadSitio {
   width: 6vh;
+}
+
+.imagenesCar {
+  width: 250px;
 }
 
 .principal {
@@ -468,14 +413,21 @@ h3 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.h2Contacto {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .imgContacto {
   max-width: 100%;
   height: auto;
   width: 100%;
 }
 
-.formulario {
-  margin-left: 25px;
+.formContact {
+  margin: 10px 150px;
   padding: 20px;
 }
 
@@ -570,8 +522,16 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
-header {
-  width: "100%";
+.imagenSobreNosotros {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.imagenSobreNosotros img {
+  display: flex;
+  height: auto;
+  width: 100%;
 }
 
 .textoCentrado {

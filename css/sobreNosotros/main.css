@@ -1,5 +1,13 @@
-header {
-  width: "100%";
+.imagenSobreNosotros {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.imagenSobreNosotros img {
+  display: flex;
+  height: auto;
+  width: 100%;
 }
 
 .textoCentrado {

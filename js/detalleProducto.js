@@ -13,50 +13,42 @@ document.addEventListener("DOMContentLoaded", function () {
         mostrarDetalles(productoSeleccionado);
     } else {
         // Si no hay información del producto, redirige a la página principal
-        window.location.href = 'index.html';
+        window.location.href = 'tienda.html';
     }
 });
 
-
 function mostrarDetalles(producto) {
-    const detallesProducto = document.getElementById('detallesProducto');
+    const detallesCarousel = document.getElementById('product-carousel');
+    const detallesNombre = document.getElementById('product-name');
+    const detallesPrecio = document.getElementById('product-price');
+    const detallesDescripcion = document.getElementById('product-description');
+    const detallesMarca = document.getElementById('product-brand');
 
-    // Crea el HTML para mostrar los detalles del producto con carrusel
-    const detallesHTML = `
-        <div id="detallesCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                ${producto.imagenes.map((imagen, index) => `
-                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                        <img src="${imagen}" class="" alt="${producto.marca} ${producto.modelo}">
-                    </div>
-                `).join('')}
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#detallesCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#detallesCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%);"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-            <div class="card-body">
-                <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
-                <p class="card-text">Color: ${producto.color}</p>
-                <p class="card-text">Precio: $${producto.precio}</p>
-                <button class="botonesPersonalizados" onclick="agregarAlCarrito('${producto.marca} ${producto.modelo}', ${producto.precio})">Agregar al carrito</button>
-                <a href="../tienda.html" class="botonesPersonalizados">Volver a tienda</a>
-            </div>
+    // Configura el carrusel de imágenes
+    detallesCarousel.innerHTML = `
+        <div class="carousel-inner product-links-wap" role="listbox">
+            ${producto.imagenes.map((imagen, index) => `
+                <div class="carousel-item">
+                    <img src="${imagen}" class="imagenesCar" alt="${producto.marca} ${producto.modelo}">
+                </div>
+            `).join('')}
+        </div>
+        <div class="row d-flex justify-content-center mb-5">
+            <a href="#product-carousel" role="button" data-bs-slide="prev" class="col-2 align-self-center text-center">
+                <i class="text-dark fas fa-chevron-left"></i>
+            </a>
+            <a href="#product-carousel" role="button" data-bs-slide="next" class="col-2 align-self-center text-center">
+                <i class="text-dark fas fa-chevron-right"></i>
+            </a>
         </div>
     `;
 
-    detallesProducto.innerHTML = detallesHTML;
+    // Rellena el contenido dinámico de los detalles del producto
+    detallesNombre.textContent = `${producto.marca} ${producto.modelo}`;
+    detallesPrecio.textContent = `Precio: $${producto.precio}`;
+    detallesMarca.textContent = `Marca: ${producto.marca}`;
 
-    // Inicializa el carrusel usando Bootstrap
-    const detallesCarousel = new bootstrap.Carousel(document.getElementById('detallesCarousel'));
-
-    // Agrega evento al cambio de slide para actualizar la información del producto
-    detallesCarousel._element.addEventListener('slide.bs.carousel', function (event) {
-        const indiceSlide = event.to; // Índice del nuevo slide
-        // Puedes actualizar el contenido del producto según el índice del slide si es necesario
-    });
+    // Rellena las especificaciones del producto
+    detallesEspecificaciones.innerHTML = producto.especificaciones.map(spec => `<li>${spec}</li>`).join('');
 }
+

@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-md-6">
                     <h6>${producto.marca} ${producto.modelo}</h6>
-                    <p>Precio: $${producto.precio.toFixed(2)}</p>
-                    <p>IVA: $${(precioConIva - producto.precio).toFixed(2)}</p>
-                    <p>Precio + IVA: $${precioConIva.toFixed(2)}</p>
+                    <p>Precio: ${producto.precio.toFixed(2)}€</p>
+                    <p>IVA: ${(precioConIva - producto.precio).toFixed(2)}€</p>
+                    <p>Precio + IVA: ${precioConIva.toFixed(2)}€</p>
                 </div>
                 <div class="col-md-3">
                     <label for="cantidad-${index}">Cantidad:</label>
                     <input class="cantidadSitio" type="number" id="cantidad-${index}" value="${producto.cantidad}" min="1" oninput="actualizarCantidad(${index}, this.value)" onkeypress="actualizarSubtotal(event, ${index})">
                     <button onclick="eliminarProducto(${index})" class="botonesPersonalizados">Eliminar</button>
-                    <p>Subtotal: $<span class="textoResaltado" id="subtotal-${index}">${(precioConIva * producto.cantidad).toFixed(2)}</span></p>
+                    <p>Subtotal: <span class="textoResaltado" id="subtotal-${index}">${(precioConIva * producto.cantidad).toFixed(2)}€</span></p>
                 </div>
             </div>
             `;
@@ -147,6 +147,15 @@ function eliminarProducto(index) {
 }
 
 function vaciarCarrito() {
+    // Vaciar el carrito almacenado en el almacenamiento local
+    localStorage.removeItem('carrito');
+
+    // Actualizar la página para reflejar el carrito vacío
+    location.reload();
+}
+
+function comprar() {
+    alert("Comprado maquina");
     // Vaciar el carrito almacenado en el almacenamiento local
     localStorage.removeItem('carrito');
 

@@ -1,8 +1,18 @@
 @import '../partials/variables.scss';
 @import '../partials/breakpoints.scss';
-header{
-    width:"100%";
+
+.imagenSobreNosotros{
+    display: flex;
+    justify-content:center;
+    background-color: $negro;
 }
+.imagenSobreNosotros img{
+    display: flex;
+    height: auto;
+    width: 100%;
+
+}
+
 .textoCentrado{
     text-align:$center;
     width: 20%;

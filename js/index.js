@@ -105,7 +105,7 @@ function crearCarta(categoria) {
             <div class="producto-card m-3">
                 <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre}">
                 <div class="producto-titulo">
-                    <a href="../tienda.html" class="botonesPersonalizados">${categoria.nombre}</a>
+                    <a href="../tienda.html"> <button class="botonesPersonalizados">${categoria.nombre}</button></a>
                 </div>
             </div>
         </div>

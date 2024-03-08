@@ -153,15 +153,26 @@ function vaciarCarrito() {
     // Actualizar la página para reflejar el carrito vacío
     location.reload();
 }
+document.getElementById('botonComprar').addEventListener('click', comprar);
 
 function comprar() {
-    alert("Comprado maquina");
+    const offCanvas = document.getElementById('offCanvas');
+    const offCanvasMessage = document.getElementById('offCanvasMessage');
+    offCanvasMessage.textContent = '¡Producto añadido al carrito!';
+    offCanvas.classList.add('show');
+
+    // Ocultar el off-canvas después de un tiempo
+    setTimeout(function() {
+        offCanvas.classList.remove('show');
+    }, 1800);
+
     // Vaciar el carrito almacenado en el almacenamiento local
     localStorage.removeItem('carrito');
 
     // Actualizar la página para reflejar el carrito vacío
     location.reload();
 }
+
 // Descuentos:
 function aplicarDescuento() {
     const codigoPromocional = document.getElementById('inputCodigoPromocional').value.toLowerCase();

@@ -4,6 +4,7 @@
   place-content: center;
   box-shadow: 0 1px 15px 1px rgba(52, 40, 104, 0.08);
   width: 70%;
+  min-height: 40vh;
 }
 
 .allado {
@@ -19,6 +20,33 @@
 
 .cantidadSitio {
   width: 6vh;
+}
+
+.off-canvas {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 206, 117, 0.1);
+  z-index: 1000;
+  transition: left 0.5s ease;
+}
+
+.off-canvas-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+#offCanvasMessage {
+  text-shadow: 3px 3px #000000;
+}
+
+.show {
+  left: 0; /* Muestra el off-canvas */
 }
 
 /*# sourceMappingURL=carrito.css.map */

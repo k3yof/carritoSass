@@ -26,6 +26,7 @@
         text-decoration: none;
         grid-gap: $gapMenu;
         letter-spacing: 2px;
+        transition: transform 0.3s ease-in-out;
     }
     }
 
@@ -35,7 +36,10 @@
     color: $negro;
     font-size: 18px;
     }
-
+    .enlaces a:hover{
+        color:#4d4444;
+        transform: scale(1.1);
+    }
     @media screen and (max-width: 1240px) {
         .enlaces a {
             color: $negro;

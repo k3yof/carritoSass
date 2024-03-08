@@ -1,7 +1,6 @@
 .principal {
   display: grid;
   place-content: center;
-  margin-top: 10%;
 }
 
 .h1Principal {
@@ -14,20 +13,20 @@
 .containerMotos {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
 }
 
-.card {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  width: 40vh;
-  margin: 10%;
-  grid-gap: 20px;
+.bannerYamaha {
+  display: flex;
+  justify-content: center;
+  background-color: black;
 }
 
-.card-body {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+.bannerYamaha img {
+  display: flex;
+  height: auto;
+  width: 100%;
+  max-width: 720px;
 }
 
 @media screen and (max-width: 1290px) {

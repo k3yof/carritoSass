@@ -23,12 +23,17 @@
   text-decoration: none;
   grid-gap: 10px;
   letter-spacing: 2px;
+  transition: transform 0.3s ease-in-out;
 }
 .menu .menu-toggle {
   cursor: pointer;
   display: none;
   color: black;
   font-size: 18px;
+}
+.menu .enlaces a:hover {
+  color: #4d4444;
+  transform: scale(1.1);
 }
 @media screen and (max-width: 1240px) {
   .menu .enlaces a {
@@ -192,7 +197,6 @@
 .principal {
   display: grid;
   place-content: center;
-  margin-top: 10%;
 }
 
 .h1Principal {
@@ -205,20 +209,20 @@
 .containerMotos {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
 }
 
-.card {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  width: 40vh;
-  margin: 10%;
-  grid-gap: 20px;
+.bannerYamaha {
+  display: flex;
+  justify-content: center;
+  background-color: black;
 }
 
-.card-body {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+.bannerYamaha img {
+  display: flex;
+  height: auto;
+  width: 100%;
+  max-width: 720px;
 }
 
 @media screen and (max-width: 1290px) {
@@ -281,17 +285,6 @@
   display: grid;
   place-content: center;
   grid-template-columns: repeat(4, auto);
-}
-
-.card {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  width: 40vh;
-}
-
-.card-body {
-  display: grid;
-  grid-template-columns: repeat(1, auto);
 }
 
 .pagina-actual {
@@ -361,6 +354,9 @@
 }
 
 @media screen and (max-width: 1290px) {
+  .h1Categorias {
+    font-size: 25px;
+  }
   .contenedor-cartas {
     display: grid;
     place-content: center;
@@ -368,6 +364,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .h1Categorias {
+    font-size: 25px;
+  }
   .contenedor-cartas {
     display: grid;
     place-content: center;
@@ -375,24 +374,19 @@
   }
 }
 footer {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
   height: 40vh;
-  align-items: center;
-  background-image: url(../../imagenes/footer.jpg);
+  place-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  background: linear-gradient(rgba(0, 0, 0, 0.737), rgba(42, 38, 38, 0.857)), url(../../imagenes/footer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   color: #ffffff;
-  padding: 20px;
+  grid-gap: 40px;
   font-size: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.perfil {
-  display: flex;
-  align-items: center;
 }
 
 .perfil img {
@@ -409,7 +403,7 @@ footer {
   text-align: left;
 }
 
-.seccion-contacto, .seccion-redes {
+.seccion-contacto, .seccion-paginas {
   text-align: center;
 }
 
@@ -418,43 +412,66 @@ h3 {
   margin-bottom: 10px;
 }
 
-.seccion-redes a {
+.seccion-paginas {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.seccion-paginas a {
   color: #ffffff;
   text-decoration: none;
-  margin: 5px;
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-  border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
 
-.seccion-redes a:hover {
-  background-color: maroon;
-  transform: scale(2);
+.seccion-paginas a:hover {
+  transform: scale(1.3);
 }
 
-@media screen and (max-width: 768px) {
+.seccion-pago {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.seccion-pago a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.seccion-pago a:hover {
+  transform: scale(1.3);
+}
+
+@media screen and (max-width: 1100px) {
   footer {
-    flex-direction: column;
+    height: 100%;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .seccion-pago, .perfil, .perfil-info {
     text-align: center;
   }
-  .perfil img {
-    margin-right: 0;
-    margin-bottom: 10px;
+}
+@media screen and (max-width: 780px) {
+  footer {
+    height: 100%;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-header {
-  width: "100%";
+@media screen and (max-width: 600px) {
+  footer {
+    height: 100%;
+    place-content: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-
-header img {
-  display: block;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  height: 100%;
-  object-fit: cover;
+.imgContacto {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .formulario {
@@ -469,7 +486,8 @@ header img {
 
 .informacionSitio {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 .informacionSitio p {
@@ -498,13 +516,6 @@ header img {
   place-items: center;
 }
 
-.principalFormulario {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
 @media screen and (max-width: 1317px) {
   .principalFormulario {
     place-items: center;
@@ -519,6 +530,9 @@ header img {
   }
 }
 @media screen and (max-width: 1095px) {
+  .header img {
+    height: 600px;
+  }
   .informacionSitio {
     display: grid;
     grid-template-columns: 1fr;
@@ -543,6 +557,17 @@ header img {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .principalFormulario {
+    grid-template-columns: 1fr;
+    place-items: center;
+    width: 50px;
+  }
+  .informacionSitio {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 header {
@@ -598,19 +623,27 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease-in-out;
 }
 
 .botonesPersonalizados:hover {
   background-color: #051C80;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 
 .producto-card {
   width: 300px;
   height: 100%;
   display: grid;
-  border: 1px solid black;
   place-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.producto-card:hover {
+  transform: scale(1.1);
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .producto-info {

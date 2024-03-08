@@ -11,7 +11,7 @@ const contenedorCartas = document.getElementById('cartasInformativas');
 function crearCarta(carta) {
     if (carta.activada) {
         return `
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-5">
                 <div class="producto-card  m-3">
                     <img src="${carta.imagen}" class="card-img-top" alt="${carta.titulo}">
                     <div class="producto-info">

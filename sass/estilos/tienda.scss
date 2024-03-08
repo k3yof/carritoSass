@@ -20,16 +20,6 @@
     grid-template-columns: repeat(4, auto);
 }
 
-.card {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 40vh;
-}
-
-.card-body {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-}
 .pagina-actual {
     background-color: #000; /* Color de fondo de la página actual */
     color: #000; /* Color del texto de la página actual */

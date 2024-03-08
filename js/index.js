@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function rotarProductos() {
         // Para seleccionar la cantidad de motos
-        const productosAleatorios = seleccionarAleatorios(productos, 4);
+        const productosAleatorios = seleccionarAleatorios(productos, 3);
 
         // Guardamos la seleccion,para que cuando recargemos no cambie
         almacenarProductosSeleccionados(productosAleatorios);
@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
         productosMostrar.forEach(producto => {
             motosHTML += `
                 <div class="col-md-4 mb-4">
-                    <div class="card m-3">
+                    <div class="producto-card m-3">
                         <img src="${producto.imagen}" class="card-img-top" alt="${producto.marca} ${producto.modelo}">
-                        <div class="card-body">
-                            <h5 class="card-title">${producto.marca} ${producto.modelo}</h5>
-                            <p class="card-text">Color: ${producto.color}</p>
-                            <p class="card-text">Precio: $${producto.precio}</p>
+                        <div class="producto-info">
+                            <h5 class=""producto-titulo">${producto.marca} ${producto.modelo}</h5>
+                            <p class="producto-datos">Color: ${producto.color}</p>
+                            <p class="producto-datos">Precio: $${producto.precio}</p>
                             <a href="#" class="botonesPersonalizados">Detalles</a>
                         </div>
                     </div>
@@ -100,13 +100,13 @@ function crearCarta(categoria) {
     if (categoria.destacada) {
         return `
         <div class="col-md-4 mb-4">
-        <div class="card m-3">
-            <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre}">
-            <div class="card-body">
-                <a href="../tienda.html" class="botonesPersonalizados">${categoria.nombre}</a>
+            <div class="producto-card m-3">
+                <img src="${categoria.imagen}" class="card-img-top" alt="${categoria.nombre}">
+                <div class="producto-titulo">
+                    <a href="../tienda.html" class="botonesPersonalizados">${categoria.nombre}</a>
+                </div>
             </div>
         </div>
-    </div>
         `;
     } else {
         return '';

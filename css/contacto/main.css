@@ -1,14 +1,7 @@
-header {
-  width: "100%";
-}
-
-header img {
-  display: block;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  height: 100%;
-  object-fit: cover;
+.imgContacto {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .formulario {
@@ -23,7 +16,8 @@ header img {
 
 .informacionSitio {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 .informacionSitio p {
@@ -52,13 +46,6 @@ header img {
   place-items: center;
 }
 
-.principalFormulario {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
 @media screen and (max-width: 1317px) {
   .principalFormulario {
     place-items: center;
@@ -73,6 +60,9 @@ header img {
   }
 }
 @media screen and (max-width: 1095px) {
+  .header img {
+    height: 600px;
+  }
   .informacionSitio {
     display: grid;
     grid-template-columns: 1fr;
@@ -97,6 +87,17 @@ header img {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .principalFormulario {
+    grid-template-columns: 1fr;
+    place-items: center;
+    width: 50px;
+  }
+  .informacionSitio {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 

@@ -17,6 +17,9 @@
 }
 
 @media screen and (max-width: 1290px) {
+  .h1Categorias {
+    font-size: 25px;
+  }
   .contenedor-cartas {
     display: grid;
     place-content: center;
@@ -24,6 +27,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .h1Categorias {
+    font-size: 25px;
+  }
   .contenedor-cartas {
     display: grid;
     place-content: center;

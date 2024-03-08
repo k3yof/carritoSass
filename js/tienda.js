@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <p class="producto-datos">Precio: €${producto.precio.toFixed(2)}</p>
                                 <p class="producto-datos">IVA: €${(precioConIva - producto.precio).toFixed(2)}</p>
                                 <p class="producto-datos">Precio + IVA: €${precioConIva.toFixed(2)}</p>
-                                <a href="#" class="botonesPersonalizados btn-detalle">Detalles</a>
+                                <a href="#" class="btn-detalle"><button class="botonesPersonalizados">Detalles</button></a>
                             </div>
                         </div>
                     </div>
